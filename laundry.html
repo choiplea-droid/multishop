@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="navLaundry">셀프빨래방</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="subpage.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" data-i18n="navHome">HOME</a>
+      <button type="button" class="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+      <div class="lang-switcher">
+        <button type="button" class="lang-btn active" data-lang="ko">한국어</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="zh">中文</button>
+        <button type="button" class="lang-btn" data-lang="ja">日本語</button>
+      </div>
+    </div>
+  </header>
+  <nav class="full-menu" aria-hidden="true">
+    <div class="full-menu-inner">
+      <button type="button" class="close-menu" aria-label="메뉴 닫기">&times;</button>
+      <ul class="full-menu-list">
+        <li><a href="laundry.html" data-i18n="navLaundry">셀프빨래방</a></li>
+        <li><a href="print.html" data-i18n="navPrint">프린트샵</a></li>
+        <li><a href="music.html" data-i18n="navMusic">음악연습실</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="sub-main sub-main--laundry sub-main--laundry-home">
+    <header class="sub-hero">
+      <h1 class="sub-main__title" data-i18n="laundryMainTitle">🧺 빨래방 사용 안내</h1>
+    </header>
+
+    <div class="laundry-grid">
+      <section class="sub-section">
+        <h2 class="sub-section__title" data-i18n="laundryPayTitle">💳 결제 방법 안내</h2>
+        <div class="sub-block">
+          <h3 class="sub-block__heading" data-i18n="laundryCashTitle">💵 현금 결제</h3>
+          <ul class="sub-list">
+            <li data-i18n="laundryCashBullet1">500원 동전 사용</li>
+            <li data-i18n="laundryCashBullet2">실내 동전교환기에서 교환 후 이용</li>
+          </ul>
+          <a href="laundry-coin.html" class="sub-link" data-i18n="laundryCashLink">동전 교환기 안내</a>
+        </div>
+        <div class="sub-block">
+          <h3 class="sub-block__heading" data-i18n="laundryCardTitle">💳 신용카드 결제</h3>
+          <ul class="sub-list">
+            <li data-i18n="laundryCardBullet1">선불카드 발급기에서 카드 발급 후 사용</li>
+          </ul>
+          <a href="laundry-card.html" class="sub-link" data-i18n="laundryCardLink">신용카드 결제 안내</a>
+        </div>
+      </section>
+
+      <section class="sub-section">
+        <h2 class="sub-section__title" data-i18n="laundryBonusTitle">🎁 선불카드 충전 보너스 안내</h2>
+        <p class="sub-lead" data-i18n="laundryBonusLead">충전 금액에 따라 추가 금액이 지급됩니다.</p>
+        <div class="sub-table-wrap">
+          <table class="sub-table">
+            <thead>
+              <tr>
+                <th data-i18n="laundryBonusColAmount">충전 금액</th>
+                <th data-i18n="laundryBonusColBonus">추가 지급</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>10,000원</td><td>+1,000원</td></tr>
+              <tr><td>20,000원</td><td>+3,000원</td></tr>
+              <tr><td>30,000원</td><td>+5,000원</td></tr>
+              <tr><td>40,000원</td><td>+7,000원</td></tr>
+              <tr><td>50,000원</td><td class="sub-table__highlight">+25,000원</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <section class="sub-section">
+      <h2 class="sub-section__title" data-i18n="laundryMachineTitle">🧼 세탁기 / 건조기 운영 안내</h2>
+      <ul class="sub-list">
+        <li data-i18n="laundryMachineWasherCount">세탁기 4대 운영</li>
+        <li>
+          <span data-i18n="laundryMachineDryerCount"><strong>건조기 6대 운영</strong></span>
+          <ul class="sub-list sub-list--nested">
+            <li data-i18n="laundryMachineDryerLarge">대형 2대</li>
+            <li data-i18n="laundryMachineDryerMedium">중형 4대</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="sub-figure">
+        <img src="assets/laundry-basic.png" alt="빨래방 전경 - 세탁기·건조기 중형 4세트, 건조기 대형 2대" class="sub-figure__img" />
+        <p class="sub-figure__cap" data-i18n="laundryFigureCap">빨래방 전경</p>
+      </div>
+      <div class="sub-links">
+        <a href="laundry-washer.html" class="sub-link" data-i18n="laundryWasherLink">세탁기 사용 안내</a>
+        <a href="laundry-dryer-medium.html" class="sub-link" data-i18n="laundryDryerMediumLink">건조기 중형 사용안내</a>
+        <a href="laundry-dryer-large.html" class="sub-link" data-i18n="laundryDryerLargeLink">건조기 대형 사용안내</a>
+      </div>
+    </section>
+
+    <section class="sub-section">
+      <h2 class="sub-section__title" data-i18n="laundryOtherTitle">🛍 기타 안내</h2>
+      <div class="sub-links">
+        <a href="laundry-card-topup.html" class="sub-link" data-i18n="laundryTopupLink">선불 카드 충전 안내</a>
+        <a href="laundry-goods.html" class="sub-link" data-i18n="laundryGoodsLink">이불 봉투 판매, 건조기 유연제 무료 제공 안내</a>
+      </div>
+    </section>
+
+    <section class="sub-section">
+      <h2 class="sub-section__title" data-i18n="laundryAcTitle">❄️ 냉난방기 사용 안내</h2>
+      <ul class="sub-list">
+        <li data-i18n="laundryAcLi1">추운 날 / 더운 날에는 작업대 위 리모컨으로 냉난방기 사용 가능</li>
+        <li data-i18n="laundryAcLi2">❗ 사용 후에는 반드시 전원을 꺼주세요</li>
+      </ul>
+      <p class="sub-note" data-i18n="laundryAcNote">✔ 다음 이용 고객을 위해 협조 부탁드립니다.</p>
+    </section>
+
+    <div class="sub-actions">
+      <a href="index.html" class="back-link" data-i18n="navHome">HOME</a>
+    </div>
+  </main>
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

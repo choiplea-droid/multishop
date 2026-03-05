@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="coinTitle">동전 교환기 안내</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="subpage.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" data-i18n="navHome">HOME</a>
+      <button type="button" class="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+      <div class="lang-switcher">
+        <button type="button" class="lang-btn active" data-lang="ko">한국어</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="zh">中文</button>
+        <button type="button" class="lang-btn" data-lang="ja">日本語</button>
+      </div>
+    </div>
+  </header>
+  <nav class="full-menu" aria-hidden="true">
+    <div class="full-menu-inner">
+      <button type="button" class="close-menu" aria-label="메뉴 닫기">&times;</button>
+      <ul class="full-menu-list">
+        <li><a href="laundry.html" data-i18n="navLaundry">셀프빨래방</a></li>
+        <li><a href="print.html" data-i18n="navPrint">프린트샵</a></li>
+        <li><a href="music.html" data-i18n="navMusic">음악연습실</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="sub-main sub-main--laundry">
+    <header class="sub-hero">
+      <h1 class="sub-main__title" data-i18n="coinTitle">동전 교환기 안내</h1>
+    </header>
+
+    <section class="sub-section">
+      <div class="sub-figure">
+        <img src="assets/coin-exchange.png" alt="동전 교환기 지폐 투입구 - 1천원, 5천원, 만원권 투입 가능" class="sub-figure__img sub-figure__img--coin" />
+      </div>
+      <div class="sub-block">
+        <h2 class="sub-block__heading" data-i18n="coinMachineTitle">💵 동전 교환기</h2>
+        <ul class="sub-list">
+          <li data-i18n="coinMachineBullet1">자판기의 왼쪽 하단에 위치한 지폐 투입구에 10,000원 이하의 지폐를 넣으시면 500원 동전으로 교환할 수 있습니다.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="sub-actions">
+      <a href="laundry.html" class="back-link" data-i18n="backToLaundry">← 빨래방 사용 안내로 돌아가기</a>
+    </div>
+  </main>
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

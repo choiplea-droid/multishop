@@ -1,0 +1,495 @@
+.sub-main {
+  padding: 6rem 1.5rem 4rem;
+  max-width: 720px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.sub-main h1 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.sub-desc {
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.back-link:hover {
+  opacity: 1;
+}
+
+/* ===== 셀프빨래방 전용 ===== */
+.sub-main--laundry {
+  max-width: 1200px;
+}
+
+/* 메인 빨래방 안내 페이지 전용 모던 스타일 */
+.sub-main--laundry-home {
+  position: relative;
+}
+
+.sub-main--laundry-home .sub-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sub-main--laundry-home .sub-main__title {
+  font-size: clamp(1.9rem, 4.4vw, 2.7rem);
+}
+
+.sub-main--laundry-home .laundry-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 900px) {
+  .sub-main--laundry-home .laundry-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: flex-start;
+  }
+}
+
+.sub-main--laundry-home .sub-section {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 18px;
+  padding: 1.75rem 1.75rem 1.8rem;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.05);
+  border: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.sub-main--laundry-home .sub-section__title {
+  border-bottom-color: rgba(0, 0, 0, 0.04);
+}
+
+.sub-main--laundry-home .sub-links {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.sub-main--laundry-home .sub-link {
+  text-decoration: none;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.sub-main--laundry-home .sub-link:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.sub-hero {
+  margin-bottom: 2.5rem;
+}
+
+.sub-main__title {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.sub-hero__desc {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0;
+  opacity: 0.88;
+}
+
+.sub-block {
+  margin-bottom: 1.5rem;
+}
+
+.sub-block__heading {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.sub-lead {
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+  opacity: 0.9;
+}
+
+.sub-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--text);
+  text-decoration: underline;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+
+.sub-link:hover {
+  opacity: 1;
+}
+
+.sub-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.sub-note {
+  font-size: 0.9rem;
+  margin: 1rem 0 0;
+  opacity: 0.9;
+}
+
+/* 테이블 */
+.sub-table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.sub-table {
+  width: 100%;
+  min-width: 260px;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.sub-table th,
+.sub-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.sub-table th {
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.sub-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.sub-table__highlight {
+  font-weight: 700;
+  color: #c65300;
+  background: rgba(198, 83, 0, 0.08);
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+  display: inline-block;
+}
+
+.sub-list--nested {
+  margin-top: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+/* 선불카드 발급 안내: 단계별 이미지 */
+.sub-steps--card .sub-steps__item {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.sub-steps--card .sub-steps__content {
+  width: 100%;
+}
+
+.sub-figure__img--step {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 280px;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.sub-block--warn {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 200, 0, 0.08);
+  border-radius: 8px;
+  border-left: 4px solid rgba(200, 150, 0, 0.5);
+}
+
+.sub-block--warn .sub-list li {
+  margin-bottom: 0.6rem;
+}
+
+/* 선불카드: 현금 / 신용카드 좌우 나란히 */
+.card-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.sub-main--laundry .card-columns {
+  max-width: 1200px;
+}
+
+.sub-section--col {
+  min-width: 0;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.sub-section--col .sub-section__title {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.sub-section--col .sub-steps__item {
+  margin-bottom: 1.25rem;
+}
+
+.sub-section--col .sub-figure__img--step {
+  max-height: 220px;
+}
+
+@media (max-width: 900px) {
+  .card-columns {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* 모바일: 제목만 보이고 클릭 시 펼침 */
+  .card-accordion__summary {
+    list-style: none;
+    cursor: pointer;
+    padding-right: 2.5rem;
+    position: relative;
+    user-select: none;
+  }
+
+  .card-accordion__summary::-webkit-details-marker,
+  .card-accordion__summary::marker {
+    display: none;
+  }
+
+  .card-accordion__summary::after {
+    content: "";
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    width: 0.5rem;
+    height: 0.5rem;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transition: transform 0.2s;
+  }
+
+  .card-accordion[open] .card-accordion__summary::after {
+    transform: translateY(-30%) rotate(180deg);
+  }
+
+  .card-accordion__body {
+    padding-top: 0.5rem;
+  }
+}
+
+.sub-section {
+  margin-bottom: 2.5rem;
+}
+
+.sub-section__title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sub-section--visual {
+  margin-bottom: 2rem;
+}
+
+.sub-figure {
+  margin: 0;
+}
+
+.sub-figure__img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 0.5rem;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.sub-figure__img--coin {
+  max-width: 100%;
+}
+
+@media (min-width: 900px) {
+  .sub-figure__img--coin {
+    max-width: 420px;
+  }
+}
+
+.washer-pet-warning {
+  max-width: 260px;
+}
+
+.washer-hero {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.washer-hero__main,
+.washer-hero__side {
+  margin-bottom: 1.5rem;
+}
+
+.washer-main-img {
+  max-width: 100%;
+}
+
+.washer-hero__side {
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .washer-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .washer-hero__main,
+  .washer-hero__side {
+    margin-bottom: 0;
+  }
+}
+
+.sub-figure__cap {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin: 0;
+  text-align: center;
+}
+
+/* 단계 목록 */
+.sub-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: step;
+}
+
+.sub-steps__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+  counter-increment: step;
+}
+
+.sub-steps__num {
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  line-height: 1.75rem;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--bg);
+  background: var(--text);
+  border-radius: 50%;
+}
+
+.sub-steps__text {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding-top: 0.15rem;
+}
+
+/* 요금·시간 카드 */
+.sub-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.sub-card {
+  padding: 1.25rem;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.sub-card__title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.5rem;
+  opacity: 0.8;
+}
+
+.sub-card__value {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.sub-card__note {
+  font-size: 0.8rem;
+  margin: 0;
+  opacity: 0.7;
+}
+
+/* 유의사항 리스트 */
+.sub-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.sub-list li {
+  margin-bottom: 0.5rem;
+}
+
+.sub-actions {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 600px) {
+  .sub-main--laundry {
+    padding-top: 5rem;
+  }
+
+  .sub-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .sub-figure__img {
+    max-width: 100%;
+  }
+}

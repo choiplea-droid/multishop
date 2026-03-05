@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="cardIssuePageTitle">신규 선불카드 발급 안내</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="subpage.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" data-i18n="navHome">HOME</a>
+      <button type="button" class="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+      <div class="lang-switcher">
+        <button type="button" class="lang-btn active" data-lang="ko">한국어</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="zh">中文</button>
+        <button type="button" class="lang-btn" data-lang="ja">日本語</button>
+      </div>
+    </div>
+  </header>
+  <nav class="full-menu" aria-hidden="true">
+    <div class="full-menu-inner">
+      <button type="button" class="close-menu" aria-label="메뉴 닫기">&times;</button>
+      <ul class="full-menu-list">
+        <li><a href="laundry.html" data-i18n="navLaundry">셀프빨래방</a></li>
+        <li><a href="print.html" data-i18n="navPrint">프린트샵</a></li>
+        <li><a href="music.html" data-i18n="navMusic">음악연습실</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="sub-main sub-main--laundry">
+    <header class="sub-hero">
+      <h1 class="sub-main__title" data-i18n="cardIssuePageTitle">🆕 신규 선불카드 발급 안내</h1>
+      <p class="sub-hero__desc" data-i18n="cardIssueHeroDesc">처음 이용하시는 경우, 선불카드를 먼저 발급받으셔야 합니다.</p>
+    </header>
+
+    <div class="card-columns">
+    <!-- 💵 현금으로 카드 발급 (왼쪽) -->
+    <details class="sub-section sub-section--col card-accordion" open>
+      <summary class="sub-section__title card-accordion__summary" data-i18n="cardIssueCashTitle">💵 현금으로 카드 발급</summary>
+      <div class="card-accordion__body">
+      <h3 class="sub-block__heading" data-i18n="cardIssueHowTo">📌 발급 방법</h3>
+      <ol class="sub-steps sub-steps--card">
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">1</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="cardIssueCashStep1">[카드 발급] 버튼 선택</span>
+            <img src="assets/card-step1.png" alt="카드 발급 버튼 선택 화면" class="sub-figure__img sub-figure__img--step" />
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">2</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="cardIssueCashStep2">현금 선택</span>
+            <img src="assets/card-step2-cash.png" alt="현금 선택 화면" class="sub-figure__img sub-figure__img--step" />
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">3</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="cardIssueCashStep3">발급 금액 선택 후 결제 버튼 클릭</span>
+            <img src="assets/card-step3-1.png" alt="발급 금액 선택 및 결제 버튼" class="sub-figure__img sub-figure__img--step" />
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">4</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="cardIssueCashStep4">지폐 투입</span>
+            <img src="assets/card-step4-cash.png" alt="지폐 투입구 - 현금 전용, 카드 넣지 마세요" class="sub-figure__img sub-figure__img--step" />
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">5</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="cardIssueCashStep5">카드 배출구에서 카드 수령</span>
+            <img src="assets/card-step5-cash.png" alt="카드 배출구에서 카드 수령" class="sub-figure__img sub-figure__img--step" />
+          </div>
+        </li>
+      </ol>
+      </div>
+    </details>
+
+    <!-- 💳 신용카드로 카드 발급 (오른쪽) -->
+    <details class="sub-section sub-section--col card-accordion" open>
+      <summary class="sub-section__title card-accordion__summary" data-i18n="cardIssueCardTitle">💳 신용카드로 카드 발급</summary>
+      <div class="card-accordion__body">
+      <h3 class="sub-block__heading" data-i18n="cardIssueHowTo">📌 발급 방법</h3>
+      <ol class="sub-steps sub-steps--card">
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">1</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="cardIssueCashStep1">[카드 발급] 버튼 선택</span>
+            <img src="assets/card-step1.png" alt="카드 발급 버튼 선택 화면" class="sub-figure__img sub-figure__img--step" />
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">2</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="cardIssueCardStep2">신용카드 선택</span>
+            <img src="assets/card-step2-card.png" alt="신용카드 선택 화면" class="sub-figure__img sub-figure__img--step" />
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">3</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="cardIssueCardStep3">발급 금액 선택 후 결제 버튼 클릭</span>
+            <img src="assets/card-step3-card.png" alt="신용카드 결제금액 선택 및 결제 버튼" class="sub-figure__img sub-figure__img--step" />
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">4</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="cardIssueCardStep4">신용카드 결제 진행</span>
+            <img src="assets/card-step4-card.png" alt="카드 투입구에 신용카드 삽입" class="sub-figure__img sub-figure__img--step" />
+            <div class="sub-block sub-block--warn">
+              <h3 class="sub-block__heading" data-i18n="cardIssueWarnTitle">⚠️ 중요 주의사항</h3>
+              <ul class="sub-list">
+                <li data-i18n="cardIssueWarn1">🔴 현금 투입구에 카드를 넣지 마세요! → 카드가 기기 내부로 들어가면 회수가 어렵고 기기 고장의 원인이 됩니다.</li>
+                <li data-i18n="cardIssueWarn2">✔ 지폐만 투입하세요.</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">5</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text">카드 배출구에서 선불카드 수령</span>
+            <img src="assets/card-step5-card.png" alt="카드 배출구에서 선불카드 수령" class="sub-figure__img sub-figure__img--step" />
+          </div>
+        </li>
+      </ol>
+      <div class="sub-block sub-block--warn">
+        <h3 class="sub-block__heading" data-i18n="cardIssueCommonWarnTitle">🚨 자주 발생하는 실수</h3>
+        <ul class="sub-list">
+          <li data-i18n="cardIssueCommonWarn1">❌ 현금 투입구에 카드 삽입</li>
+          <li data-i18n="cardIssueCommonWarn2">❌ 카드 수령 없이 자리를 떠남</li>
+          <li data-i18n="cardIssueCommonWarn3">❌ 금액 선택 후 결제 버튼을 누르지 않음</li>
+          <li data-i18n="cardIssueCommonWarn4">✔ 발급 완료 후 반드시 카드 수령을 확인해주세요.</li>
+        </ul>
+      </div>
+      </div>
+    </details>
+    </div>
+
+    <div class="sub-actions">
+      <a href="laundry.html" class="back-link" data-i18n="backToLaundry">← 빨래방 사용 안내로 돌아가기</a>
+    </div>
+  </main>
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+  <script>
+    (function() {
+      var accordions = document.querySelectorAll('.card-accordion');
+      var breakpoint = 900;
+      function setAccordionOpen() {
+        var isMobile = window.innerWidth <= breakpoint;
+        accordions.forEach(function(d) {
+          d.open = !isMobile;
+        });
+      }
+      setAccordionOpen();
+      window.addEventListener('resize', setAccordionOpen);
+    })();
+  </script>
+</body>
+</html>

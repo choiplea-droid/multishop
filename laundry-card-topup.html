@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="cardTopupTitle">선불 카드 충전 안내</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="subpage.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" data-i18n="navHome">HOME</a>
+      <button type="button" class="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+      <div class="lang-switcher">
+        <button type="button" class="lang-btn active" data-lang="ko">한국어</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="zh">中文</button>
+        <button type="button" class="lang-btn" data-lang="ja">日本語</button>
+      </div>
+    </div>
+  </header>
+  <nav class="full-menu" aria-hidden="true">
+    <div class="full-menu-inner">
+      <button type="button" class="close-menu" aria-label="메뉴 닫기">&times;</button>
+      <ul class="full-menu-list">
+        <li><a href="laundry.html" data-i18n="navLaundry">셀프빨래방</a></li>
+        <li><a href="print.html" data-i18n="navPrint">프린트샵</a></li>
+        <li><a href="music.html" data-i18n="navMusic">음악연습실</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="sub-main sub-main--laundry">
+    <header class="sub-hero">
+      <h1 class="sub-main__title" data-i18n="cardTopupTitle">선불 카드 충전 안내</h1>
+    </header>
+
+    <section class="sub-section">
+      <h2 class="sub-section__title" data-i18n="cardTopupMustReadTitle">⚠️ 꼭 읽어주세요 (중요!)</h2>
+      <div class="sub-block sub-block--warn">
+        <p class="sub-lead" data-i18n="cardTopupMustReadLead1">
+          🔴 충전 과정 중 카드를 반드시 태그해야 충전이 완료됩니다.
+        </p>
+        <p class="sub-lead" data-i18n="cardTopupMustReadLead2">
+          👉 마지막에 카드를 태그하지 않으면 결제가 되어도 충전되지 않습니다.
+        </p>
+      </div>
+    </section>
+
+    <section class="sub-section">
+      <h2 class="sub-section__title" data-i18n="cardTopupQuickTitle">💡 한눈에 보는 충전 순서</h2>
+      <p class="sub-lead" data-i18n="cardTopupQuickLead">
+        카드충전 버튼 → 신용카드 → 금액선택 → 카드결제 → 카드 터치 → 완료
+      </p>
+
+      <ol class="sub-steps sub-steps--card">
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">1</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="cardTopupStep1">화면에서 [카드충전] 버튼 선택</span>
+            <img src="assets/card-charge-step1.png" alt="포인트 카드 발급 및 충전 화면에서 카드충전 버튼을 누르는 모습" class="sub-figure__img--step" />
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">2</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="cardTopupStep2">결제 방법에서 신용카드 선택 후 충전할 금액 선택</span>
+            <img src="assets/card-charge-step2.png" alt="결제 방법 선택 화면에서 신용카드와 금액을 선택하는 모습" class="sub-figure__img--step" />
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">3</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="cardTopupStep3">카드 결제 진행 (IC 카드 삽입 또는 터치)</span>
+            <img src="assets/card-charge-step3.png" alt="카드 리더기에 신용카드를 삽입해 결제하는 모습" class="sub-figure__img--step" />
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">4</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="cardTopupStep4">결제 후 오른쪽 하단 카드 충전하는 곳에 선불카드를 태그</span>
+            <img src="assets/card-charge-step3b.png" alt="결제 후 카드 충전기 오른쪽 하단에 카드를 태그하는 모습" class="sub-figure__img--step" />
+            <img src="assets/card-charge-complete1.png" alt="충전 완료 안내 화면" class="sub-figure__img--step" />
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="sub-section">
+      <h2 class="sub-section__title" data-i18n="cardTopupMistakeTitle">🚨 가장 많이 발생하는 실수</h2>
+      <ul class="sub-list">
+        <li data-i18n="cardTopupMistake1">❌ 마지막 카드 태그를 하지 않는 경우 → 이 경우 충전이 되지 않습니다.</li>
+        <li data-i18n="cardTopupMistake2">✔ 결제 후 꼭 한 번 더 카드를 태그해주세요.</li>
+      </ul>
+    </section>
+
+    <section class="sub-section">
+      <h2 class="sub-section__title" data-i18n="cardTopupConfirmTitle">④ 충전 완료 확인</h2>
+      <ul class="sub-list">
+        <li data-i18n="cardTopupConfirm1">화면에 충전 완료 메시지가 표시되는지 확인</li>
+        <li data-i18n="cardTopupConfirm2">충전 금액 및 잔액을 확인한 후 세탁기·건조기에서 사용</li>
+      </ul>
+      <div class="sub-figure" style="margin-top: 1rem;">
+        <img src="assets/card-charge-complete2.png" alt="충전 완료 후 카드 충전 완료 메시지 화면" class="sub-figure__img--step" />
+      </div>
+    </section>
+
+    <div class="sub-actions">
+      <a href="laundry.html" class="back-link" data-i18n="backToLaundry">← 빨래방 사용 안내로 돌아가기</a>
+    </div>
+  </main>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
