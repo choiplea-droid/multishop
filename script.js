@@ -44,45 +44,82 @@
     });
   });
 
-  // 모바일 아코디언: 화살표 버튼만 클릭 시 열기/닫기 (제목·본문 터치·스크롤 시에는 안 닫힘)
-  function setupCardAccordions() {
-    var accordions = document.querySelectorAll(".card-accordion");
-    var mq = window.matchMedia("(max-width: 900px)");
+  // 모바일: 탭 방식 (스크롤해도 안 닫힘)
+  (function () {
+    var BREAKPOINT = 900;
+    var mq = window.matchMedia("(max-width: " + BREAKPOINT + "px)");
 
-    accordions.forEach(function (details) {
-      var summary = details.querySelector(".card-accordion__summary");
-      if (!summary) return;
-      var btn = summary.querySelector(".card-accordion__toggle");
-      if (!btn) {
-        btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "card-accordion__toggle";
-        btn.setAttribute("aria-label", "열기/닫기");
-        btn.setAttribute("aria-expanded", details.open);
-        summary.appendChild(btn);
-      }
-      btn.setAttribute("aria-expanded", details.open);
+    function setupTabs(columns) {
+      if (columns.classList.contains("card-tabs__panels")) return;
 
-      btn.addEventListener("click", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        details.open = !details.open;
-        btn.setAttribute("aria-expanded", details.open);
+      var wrapper = document.createElement("div");
+      wrapper.className = "card-tabs";
+      columns.parentNode.insertBefore(wrapper, columns);
+      wrapper.appendChild(columns);
+      columns.classList.add("card-tabs__panels");
+
+      var details = columns.querySelectorAll(".card-accordion");
+      details.forEach(function (d) {
+        d.open = true;
       });
 
-      summary.addEventListener("click", function (e) {
-        if (!mq.matches) return;
-        if (e.target === btn || btn.contains(e.target)) return;
-        e.preventDefault();
-        e.stopPropagation();
-      }, true);
-    });
-  }
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", setupCardAccordions);
-  } else {
-    setupCardAccordions();
-  }
+      var bar = document.createElement("div");
+      bar.className = "card-tabs__bar";
+      var tab0 = document.createElement("button");
+      tab0.type = "button";
+      tab0.className = "card-tabs__tab is-active";
+      tab0.setAttribute("aria-selected", "true");
+      tab0.textContent = details[0] ? (details[0].querySelector(".card-accordion__summary") && details[0].querySelector(".card-accordion__summary").textContent.trim()) || "현금 결제" : "1";
+      var tab1 = document.createElement("button");
+      tab1.type = "button";
+      tab1.className = "card-tabs__tab";
+      tab1.setAttribute("aria-selected", "false");
+      tab1.textContent = details[1] ? (details[1].querySelector(".card-accordion__summary") && details[1].querySelector(".card-accordion__summary").textContent.trim()) || "선불카드 결제" : "2";
+      bar.appendChild(tab0);
+      bar.appendChild(tab1);
+      wrapper.insertBefore(bar, columns);
+
+      function goTo(i) {
+        details.forEach(function (d, j) {
+          d.classList.toggle("is-active", j === i);
+        });
+        bar.querySelectorAll(".card-tabs__tab").forEach(function (t, j) {
+          t.classList.toggle("is-active", j === i);
+          t.setAttribute("aria-selected", j === i ? "true" : "false");
+        });
+      }
+
+      tab0.addEventListener("click", function () {
+        goTo(0);
+      });
+      tab1.addEventListener("click", function () {
+        goTo(1);
+      });
+
+      goTo(0);
+    }
+
+    function initTabs() {
+      if (!mq.matches) return;
+      var columns = document.querySelector(".card-columns");
+      if (columns) setupTabs(columns);
+    }
+
+    document.addEventListener("click", function (e) {
+      if (!mq.matches) return;
+      var summary = e.target.closest(".card-accordion__summary");
+      if (!summary) return;
+      e.preventDefault();
+      e.stopPropagation();
+    }, true);
+
+    mq.addEventListener("change", initTabs);
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initTabs);
+    } else {
+      initTabs();
+    }
+  })();
 
   if (typeof initI18n === "function") initI18n();
 })();
