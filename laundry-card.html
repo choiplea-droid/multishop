@@ -38,8 +38,8 @@
 
     <div class="card-columns">
     <!-- 💵 현금으로 카드 발급 (왼쪽) -->
-    <details class="sub-section sub-section--col card-accordion" open>
-      <summary class="sub-section__title card-accordion__summary" data-i18n="cardIssueCashTitle">💵 현금으로 카드 발급</summary>
+    <section class="sub-section sub-section--col card-accordion">
+      <div class="sub-section__title card-accordion__summary" data-i18n="cardIssueCashTitle">💵 현금으로 카드 발급</div>
       <div class="card-accordion__body">
       <h3 class="sub-block__heading" data-i18n="cardIssueHowTo">📌 발급 방법</h3>
       <ol class="sub-steps sub-steps--card">
@@ -80,11 +80,11 @@
         </li>
       </ol>
       </div>
-    </details>
+    </section>
 
     <!-- 💳 신용카드로 카드 발급 (오른쪽) -->
-    <details class="sub-section sub-section--col card-accordion" open>
-      <summary class="sub-section__title card-accordion__summary" data-i18n="cardIssueCardTitle">💳 신용카드로 카드 발급</summary>
+    <section class="sub-section sub-section--col card-accordion">
+      <div class="sub-section__title card-accordion__summary" data-i18n="cardIssueCardTitle">💳 신용카드로 카드 발급</div>
       <div class="card-accordion__body">
       <h3 class="sub-block__heading" data-i18n="cardIssueHowTo">📌 발급 방법</h3>
       <ol class="sub-steps sub-steps--card">
@@ -141,7 +141,7 @@
         </ul>
       </div>
       </div>
-    </details>
+    </section>
     </div>
 
     <div class="sub-actions">
@@ -161,19 +161,5 @@
 
   <script src="i18n.js"></script>
   <script src="script.js"></script>
-  <script>
-    (function() {
-      var accordions = document.querySelectorAll('.card-accordion');
-      var breakpoint = 900;
-      function setAccordionOpen() {
-        var isMobile = window.innerWidth <= breakpoint;
-        accordions.forEach(function(d) {
-          d.open = !isMobile;
-        });
-      }
-      setAccordionOpen();
-      window.addEventListener('resize', setAccordionOpen);
-    })();
-  </script>
 </body>
 </html>

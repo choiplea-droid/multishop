@@ -83,8 +83,8 @@
 
     <div class="card-columns">
       <!-- 현금 결제 -->
-      <details class="sub-section sub-section--col card-accordion">
-        <summary class="sub-section__title card-accordion__summary" data-i18n="washerCashTitle">💵 현금 결제</summary>
+      <section class="sub-section sub-section--col card-accordion">
+        <div class="sub-section__title card-accordion__summary" data-i18n="washerCashTitle">💵 현금 결제</div>
         <div class="card-accordion__body">
           <p class="sub-lead" data-i18n="washerCashWarn">
             ⚠️ 사용하려는 세탁기 번호와 동일한 투입구인지 반드시 확인해주세요.
@@ -121,11 +121,11 @@
             </li>
           </ol>
         </div>
-      </details>
+      </section>
 
       <!-- 선불카드 결제 -->
-      <details class="sub-section sub-section--col card-accordion">
-        <summary class="sub-section__title card-accordion__summary" data-i18n="washerCardTitle">💳 선불카드 결제</summary>
+      <section class="sub-section sub-section--col card-accordion">
+        <div class="sub-section__title card-accordion__summary" data-i18n="washerCardTitle">💳 선불카드 결제</div>
         <div class="card-accordion__body">
           <p class="sub-lead" data-i18n="washerCardWarn">
             ⚠️ 사용하려는 세탁기 번호와 동일한 투입구인지 반드시 확인해주세요.
@@ -162,7 +162,7 @@
             </li>
           </ol>
         </div>
-      </details>
+      </section>
     </div>
 
     <section class="sub-section">
@@ -192,20 +192,6 @@
 
   <script src="i18n.js"></script>
   <script src="script.js"></script>
-  <script>
-    (function() {
-      var accordions = document.querySelectorAll('.card-accordion');
-      var breakpoint = 900;
-      function setAccordionOpen() {
-        var isMobile = window.innerWidth <= breakpoint;
-        accordions.forEach(function(d) {
-          d.open = !isMobile;
-        });
-      }
-      setAccordionOpen();
-      window.addEventListener('resize', setAccordionOpen);
-    })();
-  </script>
 </body>
 </html>
 

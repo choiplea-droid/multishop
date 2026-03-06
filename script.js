@@ -59,9 +59,6 @@
       columns.classList.add("card-tabs__panels");
 
       var details = columns.querySelectorAll(".card-accordion");
-      details.forEach(function (d) {
-        d.open = true;
-      });
 
       var bar = document.createElement("div");
       bar.className = "card-tabs__bar";
@@ -104,14 +101,6 @@
       var columns = document.querySelector(".card-columns");
       if (columns) setupTabs(columns);
     }
-
-    document.addEventListener("click", function (e) {
-      if (!mq.matches) return;
-      var summary = e.target.closest(".card-accordion__summary");
-      if (!summary) return;
-      e.preventDefault();
-      e.stopPropagation();
-    }, true);
 
     mq.addEventListener("change", initTabs);
     if (document.readyState === "loading") {
