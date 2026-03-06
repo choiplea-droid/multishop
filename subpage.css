@@ -267,66 +267,6 @@
   max-height: 220px;
 }
 
-@media (max-width: 900px) {
-  /* 모바일: 탭 방식 (스크롤해도 안 닫힘) */
-  .card-tabs__bar {
-    display: flex;
-    gap: 0.25rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .card-tabs__tab {
-    flex: 1;
-    padding: 0.7rem 0.6rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    font-family: var(--font);
-    color: var(--text);
-    background: transparent;
-    border: 2px solid rgba(0, 0, 0, 0.12);
-    border-radius: 8px;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.2s, background 0.2s, border-color 0.2s;
-  }
-
-  .card-tabs__tab.is-active {
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.06);
-    border-color: rgba(0, 0, 0, 0.25);
-  }
-
-  .card-tabs__panels {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .card-tabs__panels > .card-accordion {
-    display: none;
-  }
-
-  .card-tabs__panels > .card-accordion.is-active {
-    display: block;
-  }
-
-  .card-accordion__summary {
-    list-style: none;
-    cursor: default;
-    pointer-events: none;
-    padding-right: 1rem;
-  }
-
-  .card-accordion__summary::-webkit-details-marker,
-  .card-accordion__summary::marker {
-    display: none;
-  }
-
-  .card-accordion__body {
-    padding-top: 0.5rem;
-  }
-}
-
 .sub-section {
   margin-bottom: 2.5rem;
 }
