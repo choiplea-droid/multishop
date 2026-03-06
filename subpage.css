@@ -267,15 +267,12 @@
   max-height: 220px;
 }
 
-/* 데스크톱: JS로 추가한 토글 버튼 숨김(제목 클릭으로 열기/닫기) */
+/* 아코디언 토글 버튼: 데스크톱에서는 숨김 */
 .card-accordion__toggle {
-  display: none;
+  display: none !important;
 }
 
 @media (max-width: 900px) {
-  .card-accordion__toggle {
-    display: flex;
-  }
   .card-columns {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -285,9 +282,14 @@
   .card-accordion__summary {
     list-style: none;
     cursor: default;
-    padding-right: 3.5rem;
+    padding-right: 4rem;
+    padding-bottom: 0.5rem;
+    min-height: 3rem;
     position: relative;
     user-select: none;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
   }
 
   .card-accordion__summary::-webkit-details-marker,
@@ -295,32 +297,44 @@
     display: none;
   }
 
-  .card-accordion__toggle {
+  /* 제목 밑줄: 버튼 영역 전까지만 그리기 (선과 원이 겹치지 않도록) */
+  .card-accordion__summary::after {
+    content: "";
     position: absolute;
-    right: 0;
+    left: 0;
+    right: 3.75rem;
+    bottom: 0;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .card-accordion__toggle {
+    display: flex !important;
+    position: absolute;
+    right: 0.25rem;
     top: 50%;
     transform: translateY(-50%);
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
     min-width: 44px;
     min-height: 44px;
     padding: 0;
     border: none;
     border-radius: 50%;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.06);
     cursor: pointer;
-    display: flex;
     align-items: center;
     justify-content: center;
     -webkit-tap-highlight-color: transparent;
+    flex-shrink: 0;
   }
 
   .card-accordion__toggle::before {
     content: "";
     width: 0.5rem;
     height: 0.5rem;
-    border-right: 2px solid currentColor;
-    border-bottom: 2px solid currentColor;
+    border-right: 2px solid #1a1a1a;
+    border-bottom: 2px solid #1a1a1a;
     transform: rotate(45deg);
     transition: transform 0.2s;
   }
