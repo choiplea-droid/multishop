@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>복사 안내</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="subpage.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" data-i18n="navHome">HOME</a>
+      <button type="button" class="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+      <div class="lang-switcher">
+        <button type="button" class="lang-btn active" data-lang="ko">한국어</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="zh">中文</button>
+        <button type="button" class="lang-btn" data-lang="ja">日本語</button>
+      </div>
+    </div>
+  </header>
+  <nav class="full-menu" aria-hidden="true">
+    <div class="full-menu-inner">
+      <button type="button" class="close-menu" aria-label="메뉴 닫기">&times;</button>
+      <ul class="full-menu-list">
+        <li><a href="laundry.html" data-i18n="navLaundry">셀프빨래방</a></li>
+        <li><a href="print.html" data-i18n="navPrint">프린트샵</a></li>
+        <li><a href="music.html" data-i18n="navMusic">음악연습실</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="sub-main">
+    <header class="sub-hero">
+      <h1 class="sub-main__title">📄 복사 안내</h1>
+      <p class="sub-hero__desc">복합기에서 문서를 복사하는 방법입니다. 원고를 올바르게 올린 뒤 옵션을 선택하고 결제하면 됩니다.</p>
+    </header>
+
+    <section class="sub-section">
+      <h2 class="sub-section__title">📌 복사 순서</h2>
+      <ol class="sub-steps sub-steps--card">
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">1</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text">복합기 <strong>상단 원고 스캔부</strong>에 복사할 문서를 넣습니다. <strong>복사할 면이 하늘을 향하도록(위로)</strong> 올려 놓고, 가이드에 맞춰 위치시킵니다. 호치키스 심, 스테이플 등 이물질이 들어가지 않도록 주의하세요.</span>
+            <div class="sub-figure">
+              <img src="assets/print-copy-doc-place.png" alt="원고 장착 방향 - 복사할 면이 위로" class="sub-figure__img sub-figure__img--step" />
+            </div>
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">2</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text">복합기 화면에서 <strong>복사</strong> 버튼을 누릅니다.</span>
+            <div class="sub-figure">
+              <img src="assets/print-copy-btn.png" alt="복사 버튼 선택" class="sub-figure__img sub-figure__img--step" />
+            </div>
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">3</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text"><strong>컬러/흑백, 원고 방향, 면 선택, 해상도, 부수</strong> 등 옵션을 선택한 뒤 <strong>복사</strong> 버튼을 눌러 스캔을 시작합니다.</span>
+            <div class="sub-figure">
+              <img src="assets/print-copy-options.png" alt="복사 옵션 선택 후 복사 버튼" class="sub-figure__img sub-figure__img--step" />
+            </div>
+            <div class="sub-figure">
+              <img src="assets/print-copy-scan-progress.png" alt="복사 스캔 중" class="sub-figure__img sub-figure__img--step" />
+            </div>
+            <div class="sub-figure">
+              <img src="assets/print-copy-option-detail.png" alt="종료 후 출력 또는 계속" class="sub-figure__img sub-figure__img--step" />
+            </div>
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">4</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text"><strong>결제</strong> — 화면에 결제내역이 나오면 <strong>카드결제요청</strong> 버튼을 누른 뒤, 결제 단말기에서 신용카드, 삼성페이, 카카오페이, 제로페이, 티머니 등으로 결제합니다.</span>
+            <div class="sub-figure">
+              <img src="assets/print-copy-pay-req.png" alt="결제내역 및 카드결제요청" class="sub-figure__img sub-figure__img--step" />
+            </div>
+            <div class="sub-figure">
+              <img src="assets/print-copy-card.png" alt="결제 단말기에 카드 삽입" class="sub-figure__img sub-figure__img--step" />
+            </div>
+            <div class="sub-figure">
+              <img src="assets/print-copy-terminal.png" alt="결제 단말기" class="sub-figure__img sub-figure__img--step" />
+            </div>
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">5</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text"><strong>출력물 확인</strong> — 복합기 출력구에서 복사된 문서를 가져가세요.</span>
+            <div class="sub-figure">
+              <img src="assets/print-copy-output.png" alt="출력물 나오는 위치" class="sub-figure__img sub-figure__img--step" />
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <div class="sub-actions">
+      <a href="print.html" class="back-link">← 프린트샵 안내로 돌아가기</a>
+    </div>
+  </main>
+  <a
+    href="http://pf.kakao.com/_xaWKXxj/chat"
+    class="kakao-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="카카오톡으로 문의하기"
+  >
+    <span class="kakao-float__icon"></span>
+    <span class="kakao-float__label">카톡 문의</span>
+  </a>
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

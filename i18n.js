@@ -14,6 +14,23 @@ const translations = {
     sectionMusicSub: "MUSIC STUDIO",
     footerCopy: "멀티샵 사용 안내",
     subpageComingSoon: "사용 안내 내용을 입력해 주세요.",
+    // 프린트샵 안내 페이지
+    printPageTitle: "🖨 프린트샵 사용 안내",
+    printHeroDesc: "문서 출력, 복사, 스캔, 팩스를 한곳에서 이용하실 수 있습니다.",
+    printMobileTitle: "📱 모바일 / 개인 노트북 출력",
+    printMobileStepPrefix:
+      "1) 파일 업로드 페이지로 이동해 문서를 올린 뒤, 복합기에서 PIN 번호를 입력하면 바로 출력할 수 있습니다.",
+    printUploadButton: "📤 파일 업로드 페이지 열기",
+    printBasicTitle: "📌 기본 안내",
+    printPaperOnly: "A4 용지만 출력 가능합니다.",
+    printPaymentMethods:
+      "결제: 신용카드, 삼성페이, 카카오페이, 제로페이, 티머니 등",
+    printGuidesTitle: "🧭 기능별 사용 안내",
+    printGuideDirect: "1번 컴퓨터로 출력하는 방법 (다이렉트 출력)",
+    printGuidePin: "2,3,4번 컴퓨터로 출력하는 방법 (핀번호 입력 출력)",
+    printGuideCopy: "복사 안내",
+    printGuideScan: "스캔 방법",
+    printGuideFax: "팩스 방법",
     // 메인 빨래방 안내 페이지
     laundryMainTitle: "🧺 빨래방 사용 안내",
     laundryPayTitle: "💳 결제 방법 안내",
@@ -285,6 +302,25 @@ const translations = {
     sectionMusicSub: "MUSIC STUDIO",
     footerCopy: "Multi-Shop Guide",
     subpageComingSoon: "Add your guide content here.",
+    // Print shop guide page
+    printPageTitle: "🖨 Print Shop Guide",
+    printHeroDesc:
+      "You can use document printing, copying, scanning, and fax services here.",
+    printMobileTitle: "📱 Printing from Mobile / Personal Laptop",
+    printMobileStepPrefix:
+      "1) Open the upload page and submit your file, then enter the PIN code on the multifunction printer to print immediately.",
+    printUploadButton: "📤 Open File Upload Page",
+    printBasicTitle: "📌 Basic Information",
+    printPaperOnly: "Only A4 paper is supported.",
+    printPaymentMethods:
+      "Payment: Credit card, Samsung Pay, Kakao Pay, Zero Pay, T-money, etc.",
+    printGuidesTitle: "🧭 Feature Guides",
+    printGuideDirect: "How to print from PC #1 (Direct Print)",
+    printGuidePin:
+      "How to print from PC #2, #3, #4 (Print with PIN code)",
+    printGuideCopy: "Copying Guide",
+    printGuideScan: "Scanning Guide",
+    printGuideFax: "Fax Guide",
     // Main laundry guide page
     laundryMainTitle: "🧺 Laundry Room Guide",
     laundryPayTitle: "💳 Payment methods",
@@ -630,6 +666,23 @@ const translations = {
     sectionMusicSub: "MUSIC STUDIO",
     footerCopy: "多店使用指南",
     subpageComingSoon: "请在此填写使用说明。",
+    // 打印店指南页面
+    printPageTitle: "🖨 打印店使用指南",
+    printHeroDesc: "可在此使用文档打印、复印、扫描和传真服务。",
+    printMobileTitle: "📱 手机 / 个人笔记本打印",
+    printMobileStepPrefix:
+      "1）进入文件上传页面上传文档后，在复合机输入PIN码即可立即打印。",
+    printUploadButton: "📤 打开文件上传页面",
+    printBasicTitle: "📌 基本说明",
+    printPaperOnly: "仅支持A4纸。",
+    printPaymentMethods:
+      "支付方式：信用卡、Samsung Pay、Kakao Pay、Zero Pay、T-money等",
+    printGuidesTitle: "🧭 功能使用指南",
+    printGuideDirect: "1号电脑打印方法（直接打印）",
+    printGuidePin: "2、3、4号电脑打印方法（输入PIN码打印）",
+    printGuideCopy: "复印指南",
+    printGuideScan: "扫描指南",
+    printGuideFax: "传真指南",
     // 主洗衣房指南页面
     laundryMainTitle: "🧺 洗衣房使用指南",
     laundryPayTitle: "💳 结算方式说明",
@@ -936,6 +989,25 @@ const translations = {
     sectionMusicSub: "MUSIC STUDIO",
     footerCopy: "マルチショップご利用案内",
     subpageComingSoon: "ご利用案内の内容をご記入ください。",
+    // プリントショップ案内ページ
+    printPageTitle: "🖨 プリントショップご利用案内",
+    printHeroDesc:
+      "文書印刷、コピー、スキャン、FAXをこのページからご利用いただけます。",
+    printMobileTitle: "📱 モバイル / 個人ノートPCから印刷",
+    printMobileStepPrefix:
+      "1) ファイルアップロードページで書類をアップロードし、複合機でPIN番号を入力するとすぐに印刷できます。",
+    printUploadButton: "📤 ファイルアップロードページを開く",
+    printBasicTitle: "📌 基本案内",
+    printPaperOnly: "A4用紙のみ対応しています。",
+    printPaymentMethods:
+      "お支払い：クレジットカード、Samsung Pay、Kakao Pay、Zero Pay、T-money など",
+    printGuidesTitle: "🧭 機能別ガイド",
+    printGuideDirect: "1番PCで印刷する方法（ダイレクト印刷）",
+    printGuidePin:
+      "2・3・4番PCで印刷する方法（PIN番号入力で印刷）",
+    printGuideCopy: "コピー案内",
+    printGuideScan: "スキャン方法",
+    printGuideFax: "FAX方法",
     // メイン・ランドリー案内ページ
     laundryMainTitle: "🧺 ランドリーご利用案内",
     laundryPayTitle: "💳 お支払い方法",

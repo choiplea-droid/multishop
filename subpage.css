@@ -140,6 +140,52 @@
   opacity: 1;
 }
 
+.sub-block--topup {
+  margin-top: 1.25rem;
+}
+
+.print-upload-btn {
+  text-decoration: none;
+  padding: 0.65rem 0.95rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.04);
+  font-weight: 600;
+  margin-top: 0.5rem;
+  width: fit-content;
+  align-self: flex-start;
+}
+
+.print-upload-btn:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.print-btn-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.print-btn-list > li::marker {
+  content: "";
+}
+
+.print-guide-list {
+  display: grid;
+  gap: 0.5rem;
+  width: min(100%, max-content);
+}
+
+.print-guide-list > li {
+  margin: 0;
+}
+
+.print-guide-list .print-upload-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+}
+
 .sub-links {
   display: flex;
   flex-direction: column;
