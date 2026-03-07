@@ -26,10 +26,59 @@ body {
   min-height: 100vh;
 }
 
-/* Header - top of page */
-.header {
+/* Visitor count bar - very top, dedicated layout */
+.visitor-bar {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  color: var(--text);
+  background: var(--header-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.visitor-bar__inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.35rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.visitor-bar__item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.visitor-bar__label {
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.visitor-bar__value {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Header - below visitor bar */
+.header {
+  position: fixed;
+  top: 32px;
   left: 0;
   right: 0;
   z-index: 100;
@@ -214,8 +263,8 @@ body {
 
 /* Main - three sections in one viewport */
 .main {
-  padding-top: 60px;
-  height: calc(100vh - 60px);
+  padding-top: 92px;
+  height: calc(100vh - 92px);
   display: flex;
   flex-direction: column;
 }
@@ -336,6 +385,11 @@ body {
   font-size: 1rem;
 }
 
+.kakao-float__icon-text {
+  line-height: 1;
+  pointer-events: none;
+}
+
 .kakao-float__label {
   padding: 0.45rem 0.9rem;
   border-radius: 999px;
@@ -343,10 +397,6 @@ body {
   color: #fff;
   font-size: 0.8rem;
   white-space: nowrap;
-}
-
-.kakao-float__icon::before {
-  content: "톡";
 }
 
 @media (max-width: 768px) {

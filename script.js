@@ -1,4 +1,47 @@
 (function () {
+  // 방문자 수 바 (today / total) - 하루에 한 번만 카운트
+  (function initVisitorBar() {
+    var todayKey = "visitorDate";
+    var todayCountKey = "visitorToday";
+    var totalKey = "visitorTotal";
+    var countedDateKey = "visitorCountedDate";
+    var todayStr = new Date().toDateString();
+    var alreadyCountedToday = localStorage.getItem(countedDateKey) === todayStr;
+
+    var total = parseInt(localStorage.getItem(totalKey) || "0", 10);
+    var lastDate = localStorage.getItem(todayKey);
+    var today = parseInt(localStorage.getItem(todayCountKey) || "0", 10);
+    if (lastDate !== todayStr) today = 0;
+
+    if (!alreadyCountedToday) {
+      total += 1;
+      today += 1;
+      localStorage.setItem(totalKey, total);
+      localStorage.setItem(todayCountKey, today);
+      localStorage.setItem(todayKey, todayStr);
+      localStorage.setItem(countedDateKey, todayStr);
+    }
+
+    var bar = document.createElement("div");
+    bar.className = "visitor-bar";
+    bar.setAttribute("role", "status");
+    bar.setAttribute("aria-live", "polite");
+    var labelToday = typeof t === "function" ? t("visitorTodayLabel") : "오늘";
+    var labelTotal = typeof t === "function" ? t("visitorTotalLabel") : "총 방문";
+    bar.innerHTML =
+      '<div class="visitor-bar__inner">' +
+        '<div class="visitor-bar__item">' +
+          '<span class="visitor-bar__label" data-i18n="visitorTodayLabel">' + labelToday + '</span>' +
+          '<span class="visitor-bar__value visitor-bar__today">' + today + '</span>' +
+        '</div>' +
+        '<div class="visitor-bar__item">' +
+          '<span class="visitor-bar__label" data-i18n="visitorTotalLabel">' + labelTotal + '</span>' +
+          '<span class="visitor-bar__value visitor-bar__total">' + total + '</span>' +
+        '</div>' +
+      '</div>';
+    document.body.insertBefore(bar, document.body.firstChild);
+  })();
+
   const header = document.querySelector(".header");
   const hamburger = document.querySelector(".hamburger");
   const fullMenu = document.querySelector(".full-menu");

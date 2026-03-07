@@ -1,5 +1,5 @@
 .sub-main {
-  padding: 6rem 1.5rem 4rem;
+  padding: 7.5rem 1.5rem 4rem;
   max-width: 720px;
   margin: 0 auto;
   min-height: 100vh;
@@ -387,6 +387,15 @@
   margin: 0;
 }
 
+.sub-figure--full {
+  margin-bottom: 1.5rem;
+}
+
+.sub-figure--full .sub-figure__img {
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
 .sub-figure__img {
   display: block;
   width: 100%;
@@ -540,7 +549,7 @@
 
 @media (max-width: 600px) {
   .sub-main--laundry {
-    padding-top: 5rem;
+    padding-top: 6.5rem;
   }
 
   .sub-cards {

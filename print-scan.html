@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="faxPageTitle">팩스 방법</title>
+  <title data-i18n="scanPageTitle">스캔 SCAN</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="subpage.css">
 </head>
@@ -32,54 +32,53 @@
   </nav>
   <main class="sub-main">
     <header class="sub-hero">
-      <h1 class="sub-main__title" data-i18n="faxPageTitle">📠 팩스 방법</h1>
-      <p class="sub-hero__desc" data-i18n="faxHeroDesc">복합기에서 웹팩스로 문서를 보내는 방법입니다. <strong>수신은 되지 않고 발신만 가능</strong>합니다. 발신번호는 <strong>02-4073-0798</strong>입니다.</p>
+      <h1 class="sub-main__title" data-i18n="scanPageTitle">스캔 SCAN</h1>
+      <p class="sub-hero__desc" data-i18n="scanHeroDesc">복합기에서 USB로 문서를 스캔하여 저장하는 방법입니다. USB를 꽂은 뒤 화면에서 USB 스캔을 선택하고, 설정 후 스캔·결제하면 됩니다.</p>
     </header>
 
     <section class="sub-section">
-      <div class="sub-figure">
-        <img src="assets/print-fax-guide.png" alt="팩스 사용 방법 안내" class="sub-figure__img sub-figure__img--step" />
+      <h2 class="sub-section__title" data-i18n="scanStepsTitle">📌 스캔 순서</h2>
+      <div class="sub-figure sub-figure--full">
+        <img src="assets/print-scan-guide.png" alt="스캔 SCAN 전체 가이드 - 01 USB 결합, 02 USB 스캔, 03 세부 설정, 04 종료 후 저장, 05 카드 결제 요청, 06 결제단말기 결제" class="sub-figure__img sub-figure__img--step" />
       </div>
-    </section>
-
-    <section class="sub-section">
-      <h2 class="sub-section__title" data-i18n="faxStepsTitle">📌 팩스 보내는 순서</h2>
       <ol class="sub-steps sub-steps--card">
         <li class="sub-steps__item">
           <span class="sub-steps__num">1</span>
           <div class="sub-steps__content">
-            <span class="sub-steps__text" data-i18n="faxStep1">복합기 화면에서 <strong>웹팩스</strong>를 선택합니다.</span>
+            <span class="sub-steps__text" data-i18n="scanStep1">복합기 오른쪽 USB 포트에 USB 메모리를 꽂습니다.</span>
           </div>
         </li>
         <li class="sub-steps__item">
           <span class="sub-steps__num">2</span>
           <div class="sub-steps__content">
-            <span class="sub-steps__text" data-i18n="faxStep2"><strong>팩스 설정</strong>(컬러/흑백, 해상도, 면 선택, 파일 형식, 스캔 방향 등)을 확인한 뒤 <strong>팩스</strong> 버튼을 눌러 보냅니다.</span>
+            <span class="sub-steps__text" data-i18n="scanStep2">복합기 화면에서 USB 스캔 버튼을 누릅니다.</span>
           </div>
         </li>
         <li class="sub-steps__item">
           <span class="sub-steps__num">3</span>
           <div class="sub-steps__content">
-            <span class="sub-steps__text" data-i18n="faxStep3">화면에 <strong>결제내역</strong>이 나오면 <strong>카드결제요청</strong> 버튼을 눌러 결제를 진행합니다.</span>
+            <span class="sub-steps__text" data-i18n="scanStep3">흑백/컬러, 해상도, 원본 방향, 파일형식(PDF/JPG), 단면/양면, 연속스캔 등을 선택한 뒤 스캔(USB) 버튼을 눌러 스캔을 시작합니다.</span>
           </div>
         </li>
         <li class="sub-steps__item">
           <span class="sub-steps__num">4</span>
           <div class="sub-steps__content">
-            <span class="sub-steps__text" data-i18n="faxStep4"><strong>결제 단말기</strong>에서 신용카드, 삼성페이, 카카오페이, 제로페이, 티머니 등으로 결제합니다.</span>
+            <span class="sub-steps__text" data-i18n="scanStep4">스캔이 끝나면 '종료 후 저장'을 선택하면 USB에 저장됩니다.</span>
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">5</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="scanStep5">결제내역이 나오면 카드결제요청 버튼을 누릅니다.</span>
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">6</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="scanStep6">결제 단말기에서 신용카드, 체크카드, 제로페이, 카카오페이 등으로 결제합니다.</span>
           </div>
         </li>
       </ol>
-    </section>
-
-    <section class="sub-section">
-      <div class="sub-block sub-block--warn">
-        <h3 class="sub-block__heading" data-i18n="faxWarnTitle">⚠️ 안내</h3>
-        <ul class="sub-list">
-          <li data-i18n="faxWarn1">팩스는 <strong>발송만 가능</strong>하며, 수신은 되지 않습니다.</li>
-          <li data-i18n="faxWarn2">발신번호: <strong>02-4073-0798</strong></li>
-        </ul>
-      </div>
     </section>
 
     <div class="sub-actions">

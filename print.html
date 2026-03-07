@@ -37,16 +37,17 @@
     </header>
 
     <section class="sub-section">
-      <h2 class="sub-section__title">📱 모바일 / 개인 노트북 출력 가능</h2>
+      <h2 class="sub-section__title" data-i18n="printMobileTitle">📱 모바일 / 개인 노트북 출력 가능</h2>
       <ul class="sub-list print-btn-list">
         <li>
-          <span>파일 업로드 페이지에서 문서를 올린 뒤, 복합기에서 PIN 번호를 입력하면 바로 출력됩니다.</span>
+          <span data-i18n="printMobileStepPrefix">파일 업로드 페이지에서 문서를 올린 뒤, 복합기에서 PIN 번호를 입력하면 바로 출력됩니다.</span>
           <div class="sub-links">
             <a
               href="https://kapp.clopy.net/upload.htm"
               class="sub-link print-upload-btn"
               target="_blank"
               rel="noopener noreferrer"
+              data-i18n="printUploadButton"
             >📤 파일 업로드 바로가기</a>
           </div>
         </li>
@@ -74,7 +75,7 @@
           <a href="print-copy.html" class="sub-link print-upload-btn" data-i18n="printGuideCopy">복사 안내</a>
         </li>
         <li>
-          <a href="https://www.notion.so/162dc0370c0780249b94d69af1c1f9e7?pvs=21" class="sub-link print-upload-btn" target="_blank" rel="noopener noreferrer" data-i18n="printGuideScan">스캔 방법</a>
+          <a href="print-scan.html" class="sub-link print-upload-btn" data-i18n="printGuideScan">스캔 방법</a>
         </li>
         <li>
           <a href="print-fax.html" class="sub-link print-upload-btn" data-i18n="printGuideFax">팩스 방법</a>
@@ -93,8 +94,8 @@
     rel="noopener noreferrer"
     aria-label="카카오톡으로 문의하기"
   >
-    <span class="kakao-float__icon"></span>
-    <span class="kakao-float__label">카톡 문의</span>
+    <span class="kakao-float__icon"><span class="kakao-float__icon-text" data-i18n="kakaoIconText">톡</span></span>
+    <span class="kakao-float__label" data-i18n="kakaoInquiry">카톡 문의</span>
   </a>
   <script src="i18n.js"></script>
   <script src="script.js"></script>
