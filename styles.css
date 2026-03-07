@@ -277,6 +277,61 @@ body {
   justify-content: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   position: relative;
+  overflow: hidden;
+}
+
+/* 빨래방 섹션: 전경 이미지를 투명하게 배경으로 */
+.hero-section#laundry::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/laundry-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.28;
+  z-index: 0;
+}
+
+.hero-section#laundry .section-link {
+  position: relative;
+  z-index: 1;
+}
+
+/* 프린트샵 섹션: 배경 이미지 */
+.hero-section#print::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/print-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.28;
+  z-index: 0;
+}
+
+.hero-section#print .section-link {
+  position: relative;
+  z-index: 1;
+}
+
+/* 음악연습실 섹션: 배경 이미지 */
+.hero-section#music::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/music-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.28;
+  z-index: 0;
+}
+
+.hero-section#music .section-link {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-section:last-of-type {
