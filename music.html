@@ -31,10 +31,101 @@
       </ul>
     </div>
   </nav>
-  <main class="sub-main">
-    <h1 data-i18n="sectionMusicTitle">음악연습실</h1>
-    <p class="sub-desc" data-i18n="subpageComingSoon">사용 안내 내용을 입력해 주세요.</p>
-    <a href="index.html" class="back-link" data-i18n="navHome">HOME</a>
+  <main class="sub-main sub-main--music">
+    <header class="sub-hero">
+      <h1 class="sub-main__title" data-i18n="musicPageTitle">🎹 음악 연습실 사용 안내</h1>
+      <p class="sub-hero__desc" data-i18n="musicHeroDesc">건반 룸과 공실에서 편하게 연습하세요.</p>
+    </header>
+
+    <section class="sub-section">
+      <h2 class="sub-section__title" data-i18n="musicRoomTypesTitle">🪗 룸 종류</h2>
+      <ul class="sub-list">
+        <li><span data-i18n="musicRoomKeyboard">건반 룸 – 야마하 피아노터치 88건반</span></li>
+        <li><span data-i18n="musicRoomEmpty">공실 – 비어 있는 연습실 (악기·보컬 등 자유 연습)</span></li>
+      </ul>
+    </section>
+
+    <section class="sub-section">
+      <h2 class="sub-section__title" data-i18n="musicPriceTitle">💰 요금 안내</h2>
+      <p class="sub-lead" data-i18n="musicPriceLead">타임 요금과 쿠폰 할인 요금이 있습니다. (본인 연습 기준)</p>
+      <ul class="sub-list">
+        <li><span data-i18n="musicTimeRate">타임 요금 – 7,000원</span></li>
+      </ul>
+      <div class="sub-table-wrap">
+        <table class="sub-table">
+          <thead>
+            <tr>
+              <th data-i18n="musicCouponCol">쿠폰 시간</th>
+              <th data-i18n="musicAmountCol">요금</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="musicCoupon10">10시간</td><td data-i18n="musicPrice50">50,000원</td></tr>
+            <tr><td data-i18n="musicCoupon20">20시간</td><td data-i18n="musicPrice80">80,000원</td></tr>
+            <tr><td data-i18n="musicCoupon40">40시간</td><td data-i18n="musicPrice120">120,000원</td></tr>
+            <tr><td data-i18n="musicCoupon60">60시간</td><td class="sub-table__highlight" data-i18n="musicPrice140">140,000원</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sub-note" data-i18n="musicValidNote">✔ 결제 후 3개월까지 사용 가능합니다.</p>
+    </section>
+
+    <section class="sub-section sub-block--warn">
+      <h2 class="sub-section__title" data-i18n="musicBookingTitle">⚠️ 예약 안내</h2>
+      <p class="sub-lead" data-i18n="musicBookingLead">관악기, 타악기는 예약이 어려울 수 있습니다. 이용 전 카톡 문의를 권장합니다.</p>
+    </section>
+
+    <section class="sub-section">
+      <h2 class="sub-section__title" data-i18n="musicAmenitiesTitle">🛋 시설 및 비품</h2>
+      <ul class="sub-list sub-list--amenities">
+        <li data-i18n="musicAmenityAc">에어컨</li>
+        <li data-i18n="musicAmenityChair">의자</li>
+        <li data-i18n="musicAmenityStand">보면대</li>
+        <li><span data-i18n="musicAmenityAmp">똘똘이 앰프</span> <span class="sub-note-inline" data-i18n="musicAmenityAmpNote">(미리 요청)</span></li>
+        <li data-i18n="musicAmenityWifi">와이파이</li>
+        <li data-i18n="musicAmenityToilet">화장실</li>
+        <li data-i18n="musicAmenityVent">환풍기</li>
+        <li data-i18n="musicAmenityAlarm">경보기</li>
+        <li data-i18n="musicAmenityLock">도어락</li>
+        <li data-i18n="musicAmenityWater">정수기</li>
+      </ul>
+    </section>
+
+    <section class="sub-section sub-section--visual">
+      <h2 class="sub-section__title" data-i18n="musicStudioMapTitle">🗺 스튜디오 배치도</h2>
+      <div class="sub-figure">
+        <img src="assets/music-studio-map.png" alt="" class="sub-figure__img" data-i18n-alt="musicStudioMapAlt" />
+        <p class="sub-figure__cap" data-i18n="musicStudioMapCap">스튜디오 배치도</p>
+      </div>
+    </section>
+
+    <section class="sub-section sub-section--visual">
+      <h2 class="sub-section__title" data-i18n="musicInteriorTitle">🖼 스튜디오 내부</h2>
+      <div class="sub-figure">
+        <img src="assets/music-interior.png" alt="" class="sub-figure__img" data-i18n-alt="musicInteriorAlt" />
+        <p class="sub-figure__cap" data-i18n="musicInteriorCap">스튜디오 내부</p>
+      </div>
+    </section>
+
+    <section class="sub-section sub-section--visual">
+      <h2 class="sub-section__title" data-i18n="musicLobbyTitle">🚪 로비 / 복도</h2>
+      <div class="sub-figure">
+        <img src="assets/music-lobby.png" alt="" class="sub-figure__img" data-i18n-alt="musicLobbyAlt" />
+        <p class="sub-figure__cap" data-i18n="musicLobbyCap">로비 / 복도</p>
+      </div>
+    </section>
+
+    <section class="sub-section sub-section--visual">
+      <h2 class="sub-section__title" data-i18n="musicRoomEmptyTitle">🪑 공실 예시</h2>
+      <div class="sub-figure">
+        <img src="assets/music-room-empty.png" alt="" class="sub-figure__img" data-i18n-alt="musicRoomEmptyAlt" />
+        <p class="sub-figure__cap" data-i18n="musicRoomEmptyCap">공실</p>
+      </div>
+    </section>
+
+    <div class="sub-actions">
+      <a href="index.html" class="back-link" data-i18n="navHome">HOME</a>
+    </div>
   </main>
   <a
     href="http://pf.kakao.com/_xaWKXxj/chat"

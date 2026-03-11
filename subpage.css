@@ -199,6 +199,23 @@
   opacity: 0.9;
 }
 
+.sub-note-inline {
+  font-size: 0.85em;
+  opacity: 0.85;
+  font-weight: 400;
+}
+
+/* 음악 연습실 */
+.sub-main--music {
+  max-width: 720px;
+}
+
+.sub-list--amenities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.35rem 1rem;
+}
+
 /* 테이블 */
 .sub-table-wrap {
   overflow-x: auto;
