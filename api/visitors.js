@@ -56,23 +56,31 @@ module.exports = async function handler(req, res) {
 
     const property = "properties/" + propertyId.replace(/^properties\/?/, "");
 
-    const [response] = await analyticsDataClient.runReport({
+    // 오늘 방문자
+    const [todayResponse] = await analyticsDataClient.runReport({
       property,
-      dateRanges: [
-        { startDate: "today", endDate: "today" },
-        { startDate: "2020-01-01", endDate: "today" },
-      ],
-      dimensions: [{ name: "country" }],
+      dateRanges: [{ startDate: "today", endDate: "today" }],
       metrics: [{ name: "totalUsers" }],
     });
-
     let today = 0;
-    let total = 0;
+    if (todayResponse.rows && todayResponse.rows.length > 0) {
+      todayResponse.rows.forEach(function (row) {
+        if (row.metricValues && row.metricValues[0])
+          today += parseInt(row.metricValues[0].value || "0", 10);
+      });
+    }
 
-    if (response.rows && response.rows.length > 0) {
-      response.rows.forEach(function (row) {
-        if (row.metricValues && row.metricValues[0]) today += parseInt(row.metricValues[0].value || "0", 10);
-        if (row.metricValues && row.metricValues[1]) total += parseInt(row.metricValues[1].value || "0", 10);
+    // 전체 누적 방문자 (과거 ~ 오늘)
+    const [totalResponse] = await analyticsDataClient.runReport({
+      property,
+      dateRanges: [{ startDate: "2020-01-01", endDate: "today" }],
+      metrics: [{ name: "totalUsers" }],
+    });
+    let total = 0;
+    if (totalResponse.rows && totalResponse.rows.length > 0) {
+      totalResponse.rows.forEach(function (row) {
+        if (row.metricValues && row.metricValues[0])
+          total += parseInt(row.metricValues[0].value || "0", 10);
       });
     }
 
