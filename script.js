@@ -171,5 +171,84 @@
     });
   })();
 
+  // 이미지 클릭 시 원본 보기 (라이트박스)
+  (function initImageLightbox() {
+    var selector = "img.sub-figure__img";
+    var overlay = null;
+    var overlayImg = null;
+    var overlayCap = null;
+    var closeBtn = null;
+    var lastActiveEl = null;
+
+    function ensureOverlay() {
+      if (overlay) return;
+
+      overlay = document.createElement("div");
+      overlay.className = "img-lightbox";
+      overlay.setAttribute("role", "dialog");
+      overlay.setAttribute("aria-modal", "true");
+      overlay.setAttribute("aria-hidden", "true");
+
+      overlay.innerHTML =
+        '<button type="button" class="img-lightbox__close" aria-label="닫기">×</button>' +
+        '<figure class="img-lightbox__figure">' +
+          '<img class="img-lightbox__img" alt="" />' +
+          '<figcaption class="img-lightbox__cap"></figcaption>' +
+        '</figure>';
+
+      document.body.appendChild(overlay);
+      overlayImg = overlay.querySelector(".img-lightbox__img");
+      overlayCap = overlay.querySelector(".img-lightbox__cap");
+      closeBtn = overlay.querySelector(".img-lightbox__close");
+
+      function close() {
+        if (!overlay) return;
+        overlay.classList.remove("is-open");
+        overlay.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("is-lightbox-open");
+        if (overlayImg) overlayImg.src = "";
+        if (overlayCap) overlayCap.textContent = "";
+        if (lastActiveEl && typeof lastActiveEl.focus === "function") lastActiveEl.focus();
+        lastActiveEl = null;
+      }
+
+      closeBtn.addEventListener("click", close);
+      overlay.addEventListener("click", function (e) {
+        if (e.target === overlay) close();
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && overlay.classList.contains("is-open")) close();
+      });
+
+      overlay.__close = close;
+    }
+
+    function openFor(img) {
+      if (!img || !img.getAttribute) return;
+      ensureOverlay();
+
+      var src = img.getAttribute("data-fullsrc") || img.currentSrc || img.src;
+      if (!src) return;
+
+      lastActiveEl = document.activeElement;
+      if (overlayImg) overlayImg.src = src;
+      if (overlayImg) overlayImg.alt = img.getAttribute("alt") || "";
+      if (overlayCap) overlayCap.textContent = img.getAttribute("alt") || "";
+
+      overlay.classList.add("is-open");
+      overlay.setAttribute("aria-hidden", "false");
+      document.body.classList.add("is-lightbox-open");
+      if (closeBtn) closeBtn.focus();
+    }
+
+    document.addEventListener("click", function (e) {
+      var target = e.target;
+      if (!target || !target.matches) return;
+      if (!target.matches(selector)) return;
+      e.preventDefault();
+      openFor(target);
+    });
+  })();
+
   if (typeof initI18n === "function") initI18n();
 })();

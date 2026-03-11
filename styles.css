@@ -26,6 +26,70 @@ body {
   min-height: 100vh;
 }
 
+/* Image lightbox */
+body.is-lightbox-open {
+  overflow: hidden;
+}
+
+.img-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.72);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.img-lightbox.is-open {
+  display: flex;
+}
+
+.img-lightbox__figure {
+  margin: 0;
+  max-width: min(1100px, 96vw);
+  width: 100%;
+}
+
+.img-lightbox__img {
+  width: 100%;
+  height: auto;
+  max-height: 84vh;
+  object-fit: contain;
+  display: block;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.5);
+}
+
+.img-lightbox__cap {
+  margin-top: 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.img-lightbox__close {
+  position: fixed;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.img-lightbox__close:hover {
+  background: rgba(0, 0, 0, 0.55);
+}
+
 /* Visitor count bar - very top, dedicated layout */
 .visitor-bar {
   position: fixed;
