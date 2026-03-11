@@ -1,26 +1,7 @@
 (function () {
-  // 방문자 수 바 (today / total) - GA4 API에서 조회, 없으면 localStorage 폴백
+  // 방문자 수 바 (today / total) - GA4 API 값만 표시 (localStorage 카운트 제거)
   (function initVisitorBar() {
-    var todayKey = "visitorDate";
-    var todayCountKey = "visitorToday";
-    var totalKey = "visitorTotal";
-    var countedDateKey = "visitorCountedDate";
-    var todayStr = new Date().toDateString();
-    var alreadyCountedToday = localStorage.getItem(countedDateKey) === todayStr;
-
-    var total = parseInt(localStorage.getItem(totalKey) || "0", 10);
-    var lastDate = localStorage.getItem(todayKey);
-    var today = parseInt(localStorage.getItem(todayCountKey) || "0", 10);
-    if (lastDate !== todayStr) today = 0;
-
-    if (!alreadyCountedToday) {
-      total += 1;
-      today += 1;
-      localStorage.setItem(totalKey, total);
-      localStorage.setItem(todayCountKey, today);
-      localStorage.setItem(todayKey, todayStr);
-      localStorage.setItem(countedDateKey, todayStr);
-    }
+    var LOADING_TEXT = "...";
 
     var bar = document.createElement("div");
     bar.className = "visitor-bar";
@@ -32,11 +13,11 @@
       '<div class="visitor-bar__inner">' +
         '<div class="visitor-bar__item">' +
           '<span class="visitor-bar__label" data-i18n="visitorTodayLabel">' + labelToday + '</span>' +
-          '<span class="visitor-bar__value visitor-bar__today">' + today + '</span>' +
+          '<span class="visitor-bar__value visitor-bar__today">' + LOADING_TEXT + '</span>' +
         '</div>' +
         '<div class="visitor-bar__item">' +
           '<span class="visitor-bar__label" data-i18n="visitorTotalLabel">' + labelTotal + '</span>' +
-          '<span class="visitor-bar__value visitor-bar__total">' + total + '</span>' +
+          '<span class="visitor-bar__value visitor-bar__total">' + LOADING_TEXT + '</span>' +
         '</div>' +
       '</div>';
     document.body.insertBefore(bar, document.body.firstChild);
@@ -52,7 +33,13 @@
           if (totalEl) totalEl.textContent = data.total;
         }
       })
-      .catch(function () {});
+      .catch(function () {
+        // API 실패 시에도 localStorage로 폴백하지 않고 0으로 표시
+        var todayEl = bar.querySelector(".visitor-bar__today");
+        var totalEl = bar.querySelector(".visitor-bar__total");
+        if (todayEl) todayEl.textContent = "0";
+        if (totalEl) totalEl.textContent = "0";
+      });
   })();
 
   const header = document.querySelector(".header");
