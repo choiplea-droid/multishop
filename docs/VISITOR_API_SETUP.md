@@ -59,12 +59,14 @@
 
 - **옵션 A:** 사이트도 Vercel로 배포하면 `/api/visitors`가 같은 도메인에서 동작 → 추가 설정 없음.
 - **옵션 B:** 사이트는 GitHub Pages, API만 Vercel에 배포한 경우  
-  - Vercel 배포 후 나오는 URL(예: `https://xxx.vercel.app`)을 사용해,  
-  - **모든 페이지**의 `<head>` 안에 아래를 넣어 API 주소를 알려줍니다.
+  - Vercel 배포 후 나오는 URL(예: `https://multishop-guide-xxxx.vercel.app`)을 복사한 뒤,  
+  - 프로젝트 루트의 **`visitor-api-config.js`** 파일을 열어 `window.VISITOR_API_BASE`에 넣습니다.
 
-```html
-<script>window.VISITOR_API_BASE = "https://당신의프로젝트.vercel.app";</script>
+```javascript
+window.VISITOR_API_BASE = "https://당신의프로젝트.vercel.app";
 ```
+
+  - 저장 후 push하면 모바일/PC 모두 같은(서버) 숫자가 표시됩니다.
 
 ---
 
