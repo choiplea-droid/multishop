@@ -17,6 +17,9 @@ const translations = {
     // 프린트샵 안내 페이지
     printPageTitle: "🖨 프린트샵 사용 안내",
     printHeroDesc: "문서 출력, 복사, 스캔, 팩스를 한곳에서 이용하실 수 있습니다.",
+    printPriceTitle: "💰 요금 안내",
+    printPricePrintCopy: "출력, 복사 : 흑백 60원/장, 컬러 250원/장",
+    printPriceScanFax: "스캔, 팩스 : 500원/회",
     printMobileTitle: "📱 모바일 / 개인 노트북 출력 가능",
     printMobileStepPrefix:
       "1) 파일 업로드 페이지로 이동해 문서를 올린 뒤, 복합기에서 PIN 번호를 입력하면 바로 출력할 수 있습니다.",
@@ -371,6 +374,9 @@ const translations = {
     printPageTitle: "🖨 Print Shop Guide",
     printHeroDesc:
       "You can use document printing, copying, scanning, and fax services here.",
+    printPriceTitle: "💰 Pricing",
+    printPricePrintCopy: "Print, Copy: B&W 60 KRW/sheet, Color 250 KRW/sheet",
+    printPriceScanFax: "Scan, Fax: 500 KRW/session",
     printMobileTitle: "📱 Printing from Mobile / Personal Laptop",
     printMobileStepPrefix:
       "1) Open the upload page and submit your file, then enter the PIN code on the multifunction printer to print immediately.",
@@ -799,6 +805,9 @@ const translations = {
     // 打印店指南页面
     printPageTitle: "🖨 打印店使用指南",
     printHeroDesc: "可在此使用文档打印、复印、扫描和传真服务。",
+    printPriceTitle: "💰 费用说明",
+    printPricePrintCopy: "打印、复印：黑白 60韩元/张，彩色 250韩元/张",
+    printPriceScanFax: "扫描、传真：500韩元/次",
     printMobileTitle: "📱 手机 / 个人笔记本打印",
     printMobileStepPrefix:
       "1）进入文件上传页面上传文档后，在复合机输入PIN码即可立即打印。",
@@ -1187,6 +1196,9 @@ const translations = {
     printPageTitle: "🖨 プリントショップご利用案内",
     printHeroDesc:
       "文書印刷、コピー、スキャン、FAXをこのページからご利用いただけます。",
+    printPriceTitle: "💰 料金案内",
+    printPricePrintCopy: "印刷・コピー：白黒 60ウォン/枚、カラー 250ウォン/枚",
+    printPriceScanFax: "スキャン・FAX：500ウォン/回",
     printMobileTitle: "📱 モバイル / 個人ノートPCから印刷",
     printMobileStepPrefix:
       "1) ファイルアップロードページで書類をアップロードし、複合機でPIN番号を入力するとすぐに印刷できます。",
