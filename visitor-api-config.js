@@ -4,4 +4,4 @@
  *   예) "https://multishop-guide-xxxx.vercel.app"
  * - 사이트를 Vercel로 배포한 경우: 빈 문자열 "" 그대로 두면 됩니다.
  */
-window.VISITOR_API_BASE = "";
+window.VISITOR_API_BASE = "https://multishop-rho.vercel.app";
