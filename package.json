@@ -1,0 +1,9 @@
+{
+  "name": "multishop-guide",
+  "version": "1.0.0",
+  "description": "멀티샵 사용 안내",
+  "private": true,
+  "dependencies": {
+    "@google-analytics/data": "^4.1.0"
+  }
+}

@@ -1,5 +1,5 @@
 (function () {
-  // 방문자 수 바 (today / total) - 하루에 한 번만 카운트
+  // 방문자 수 바 (today / total) - GA4 API에서 조회, 없으면 localStorage 폴백
   (function initVisitorBar() {
     var todayKey = "visitorDate";
     var todayCountKey = "visitorToday";
@@ -40,6 +40,19 @@
         '</div>' +
       '</div>';
     document.body.insertBefore(bar, document.body.firstChild);
+
+    var apiBase = window.VISITOR_API_BASE || "";
+    fetch(apiBase + "/api/visitors", { method: "GET" })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data && typeof data.today === "number" && typeof data.total === "number") {
+          var todayEl = bar.querySelector(".visitor-bar__today");
+          var totalEl = bar.querySelector(".visitor-bar__total");
+          if (todayEl) todayEl.textContent = data.today;
+          if (totalEl) totalEl.textContent = data.total;
+        }
+      })
+      .catch(function () {});
   })();
 
   const header = document.querySelector(".header");
