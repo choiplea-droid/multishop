@@ -23,23 +23,40 @@
     document.body.insertBefore(bar, document.body.firstChild);
 
     var apiBase = window.VISITOR_API_BASE || "";
-    fetch(apiBase + "/api/visitors", { method: "GET" })
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        if (data && typeof data.today === "number" && typeof data.total === "number") {
-          var todayEl = bar.querySelector(".visitor-bar__today");
-          var totalEl = bar.querySelector(".visitor-bar__total");
-          if (todayEl) todayEl.textContent = data.today;
-          if (totalEl) totalEl.textContent = data.total;
-        }
-      })
-      .catch(function () {
-        // API 실패 시에도 localStorage로 폴백하지 않고 0으로 표시
+    function updateBar(data) {
+      if (data && typeof data.today === "number" && typeof data.total === "number") {
         var todayEl = bar.querySelector(".visitor-bar__today");
         var totalEl = bar.querySelector(".visitor-bar__total");
-        if (todayEl) todayEl.textContent = "0";
-        if (totalEl) totalEl.textContent = "0";
-      });
+        if (todayEl) todayEl.textContent = data.today;
+        if (totalEl) totalEl.textContent = data.total;
+        return true;
+      }
+      return false;
+    }
+    function setBarZero() {
+      var todayEl = bar.querySelector(".visitor-bar__today");
+      var totalEl = bar.querySelector(".visitor-bar__total");
+      if (todayEl) todayEl.textContent = "0";
+      if (totalEl) totalEl.textContent = "0";
+    }
+    function fetchVisitors(retryCount) {
+      retryCount = retryCount || 0;
+      fetch(apiBase + "/api/visitors", { method: "GET" })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (!updateBar(data) && retryCount < 2) {
+            setTimeout(function () { fetchVisitors(retryCount + 1); }, 2500);
+          }
+        })
+        .catch(function () {
+          if (retryCount < 2) {
+            setTimeout(function () { fetchVisitors(retryCount + 1); }, 2500);
+          } else {
+            setBarZero();
+          }
+        });
+    }
+    fetchVisitors(0);
   })();
 
   const header = document.querySelector(".header");

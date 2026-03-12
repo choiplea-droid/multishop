@@ -35,55 +35,11 @@
     <header class="sub-hero">
       <h1 class="sub-main__title" data-i18n="cardIssuePageTitle">🆕 신규 선불카드 발급 안내</h1>
       <p class="sub-hero__desc" data-i18n="cardIssueHeroDesc">처음 이용하시는 경우, 선불카드를 먼저 발급받으셔야 합니다.</p>
+      <p class="sub-hero__desc" data-i18n="cardIssueHeroBonus">선불카드를 결제하시는 경우 최대 25,000원의 추가금을 지급 받으실 수 있습니다.</p>
     </header>
 
     <div class="card-columns">
-    <!-- 💵 현금으로 카드 발급 (왼쪽) -->
-    <section class="sub-section sub-section--col card-accordion">
-      <div class="sub-section__title card-accordion__summary" data-i18n="cardIssueCashTitle">💵 현금으로 카드 발급</div>
-      <div class="card-accordion__body">
-      <h3 class="sub-block__heading" data-i18n="cardIssueHowTo">📌 발급 방법</h3>
-      <ol class="sub-steps sub-steps--card">
-        <li class="sub-steps__item">
-          <span class="sub-steps__num">1</span>
-          <div class="sub-steps__content">
-            <span class="sub-steps__text" data-i18n="cardIssueCashStep1">[카드 발급] 버튼 선택</span>
-            <img src="assets/card-step1.png" alt="카드 발급 버튼 선택 화면" class="sub-figure__img sub-figure__img--step" />
-          </div>
-        </li>
-        <li class="sub-steps__item">
-          <span class="sub-steps__num">2</span>
-          <div class="sub-steps__content">
-            <span class="sub-steps__text" data-i18n="cardIssueCashStep2">현금 선택</span>
-            <img src="assets/card-step2-cash.png" alt="현금 선택 화면" class="sub-figure__img sub-figure__img--step" />
-          </div>
-        </li>
-        <li class="sub-steps__item">
-          <span class="sub-steps__num">3</span>
-          <div class="sub-steps__content">
-            <span class="sub-steps__text" data-i18n="cardIssueCashStep3">발급 금액 선택 후 결제 버튼 클릭</span>
-            <img src="assets/card-step3-1.png" alt="발급 금액 선택 및 결제 버튼" class="sub-figure__img sub-figure__img--step" />
-          </div>
-        </li>
-        <li class="sub-steps__item">
-          <span class="sub-steps__num">4</span>
-          <div class="sub-steps__content">
-            <span class="sub-steps__text" data-i18n="cardIssueCashStep4">지폐 투입</span>
-            <img src="assets/card-step4-cash.png" alt="지폐 투입구 - 현금 전용, 카드 넣지 마세요" class="sub-figure__img sub-figure__img--step" />
-          </div>
-        </li>
-        <li class="sub-steps__item">
-          <span class="sub-steps__num">5</span>
-          <div class="sub-steps__content">
-            <span class="sub-steps__text" data-i18n="cardIssueCashStep5">카드 배출구에서 카드 수령</span>
-            <img src="assets/card-step5-cash.png" alt="카드 배출구에서 카드 수령" class="sub-figure__img sub-figure__img--step" />
-          </div>
-        </li>
-      </ol>
-      </div>
-    </section>
-
-    <!-- 💳 신용카드로 카드 발급 (오른쪽) -->
+    <!-- 💳 신용카드로 카드 발급 (디폴트 탭) -->
     <section class="sub-section sub-section--col card-accordion">
       <div class="sub-section__title card-accordion__summary" data-i18n="cardIssueCardTitle">💳 신용카드로 카드 발급</div>
       <div class="card-accordion__body">
@@ -141,6 +97,45 @@
           <li data-i18n="cardIssueCommonWarn4">✔ 발급 완료 후 반드시 카드 수령을 확인해주세요.</li>
         </ul>
       </div>
+      </div>
+    </section>
+
+    <!-- 💵 현금으로 카드 발급 -->
+    <section class="sub-section sub-section--col card-accordion">
+      <div class="sub-section__title card-accordion__summary" data-i18n="cardIssueCashTitle">💵 현금으로 카드 발급</div>
+      <div class="card-accordion__body">
+      <h3 class="sub-block__heading" data-i18n="cardIssueHowTo">📌 발급 방법</h3>
+      <ol class="sub-steps sub-steps--card">
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">1</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="cardIssueCashStep1">[카드 발급] 버튼 선택</span>
+            <img src="assets/card-step1.png" alt="카드 발급 버튼 선택 화면" class="sub-figure__img sub-figure__img--step" />
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">2</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="cardIssueCashStep2">현금 선택</span>
+            <img src="assets/card-step2-cash.png" alt="현금 선택 화면" class="sub-figure__img sub-figure__img--step" />
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">3</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="cardIssueCashStep3">원하는 금액만큼(10,000원~50,000원) 지폐투입 후 다음 버튼</span>
+            <img src="assets/card-cash-insert.png" alt="지폐 투입 화면 - 투입금액, 다음 버튼" class="sub-figure__img sub-figure__img--step" />
+            <img src="assets/card-step4-cash.png" alt="지폐 투입구 - 현금 전용, 카드 넣지 마세요" class="sub-figure__img sub-figure__img--step" />
+          </div>
+        </li>
+        <li class="sub-steps__item">
+          <span class="sub-steps__num">4</span>
+          <div class="sub-steps__content">
+            <span class="sub-steps__text" data-i18n="cardIssueCashStep5">카드 배출구에서 카드 수령</span>
+            <img src="assets/card-step5-cash.png" alt="카드 배출구에서 카드 수령" class="sub-figure__img sub-figure__img--step" />
+          </div>
+        </li>
+      </ol>
       </div>
     </section>
     </div>

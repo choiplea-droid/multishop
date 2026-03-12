@@ -19,7 +19,8 @@ const translations = {
     printHeroDesc: "문서 출력, 복사, 스캔, 팩스를 한곳에서 이용하실 수 있습니다.",
     printPriceTitle: "💰 요금 안내",
     printPricePrintCopy: "출력, 복사 : 흑백 60원/장, 컬러 250원/장",
-    printPriceScanFax: "스캔, 팩스 : 500원/회",
+    printPriceScan: "스캔 : 100원/장",
+    printPriceFax: "팩스 : 500원/장",
     printMobileTitle: "📱 모바일 / 개인 노트북 출력 가능",
     printMobileStepPrefix:
       "1) 파일 업로드 페이지로 이동해 문서를 올린 뒤, 복합기에서 PIN 번호를 입력하면 바로 출력할 수 있습니다.",
@@ -106,7 +107,7 @@ const translations = {
     laundryCashBullet1: "500원 동전 사용",
     laundryCashBullet2: "실내 동전교환기에서 교환 후 이용",
     laundryCashLink: "동전 교환기 안내",
-    laundryCardTitle: "💳 신용카드 결제",
+    laundryCardTitle: "💳 신용카드 결제(선불카드 신규 발급)",
     laundryCardBullet1: "선불카드 발급기에서 카드 발급 후 사용",
     laundryCardLink: "신용카드 결제 안내",
     laundryBonusTitle: "🎁 선불카드 충전 보너스 안내",
@@ -138,11 +139,12 @@ const translations = {
     // 신규 선불카드 발급
     cardIssuePageTitle: "🆕 신규 선불카드 발급 안내",
     cardIssueHeroDesc: "처음 이용하시는 경우, 선불카드를 먼저 발급받으셔야 합니다.",
+    cardIssueHeroBonus: "선불카드를 결제하시는 경우 최대 25,000원의 추가금을 지급 받으실 수 있습니다.",
     cardIssueCashTitle: "💵 현금으로 카드 발급",
     cardIssueHowTo: "📌 발급 방법",
     cardIssueCashStep1: "[카드 발급] 버튼 선택",
     cardIssueCashStep2: "현금 선택",
-    cardIssueCashStep3: "발급 금액 선택 후 결제 버튼 클릭",
+    cardIssueCashStep3: "원하는 금액만큼(10,000원~50,000원) 지폐투입 후 다음 버튼",
     cardIssueCashStep4: "지폐 투입",
     cardIssueCashStep5: "카드 배출구에서 카드 수령",
     cardIssueCardTitle: "💳 신용카드로 카드 발급",
@@ -165,7 +167,8 @@ const translations = {
     cardTopupMustReadLead2: "👉 마지막에 카드를 태그하지 않으면 결제가 되어도 충전되지 않습니다.",
     cardTopupQuickTitle: "💡 한눈에 보는 충전 순서",
     cardTopupQuickLead:
-      "카드충전 버튼 → 신용카드 → 금액선택 → 카드결제 → 카드 터치 → 완료",
+      "카드충전 버튼 → 선불카드 태그 → 신용카드 → 금액선택 → 카드결제 → 카드 터치 → 완료",
+    cardTopupStep1b: "선불카드 태그",
     cardTopupStep1: "화면에서 [카드충전] 버튼 선택",
     cardTopupStep2: "결제 방법에서 신용카드 선택 후 충전할 금액 선택",
     cardTopupStep3: "카드 결제 진행 (IC 카드 삽입 또는 터치)",
@@ -326,7 +329,7 @@ const translations = {
     goodsWasherDetergentLi2: "별도로 세제를 넣지 않으셔도 됩니다.",
     goodsDryerSoftenerTitle: "🌸 건조기 유연제 (무료)",
     goodsDryerSoftenerLi1: "위치: 작업대 위 락앤락 박스",
-    goodsDryerSoftenerLi2: "필요한 만큼만 사용해주세요.",
+    goodsDryerSoftenerLi2: "기본 1장, 세탁물이 많을 경우 최대 2장까지 사용 가능",
     goodsDryerSoftenerNote:
       "⚠️ 과다 사용 시, 무료 제공이 중단되고 유료 판매로 전환될 수 있습니다.",
     goodsStainRemoverTitle: "✨ 얼룩 제거제 (무료)",
@@ -422,7 +425,8 @@ const translations = {
       "You can use document printing, copying, scanning, and fax services here.",
     printPriceTitle: "💰 Pricing",
     printPricePrintCopy: "Print, Copy: B&W 60 KRW/sheet, Color 250 KRW/sheet",
-    printPriceScanFax: "Scan, Fax: 500 KRW/session",
+    printPriceScan: "Scan: 100 KRW/sheet",
+    printPriceFax: "Fax: 500 KRW/sheet",
     printMobileTitle: "📱 Printing from Mobile / Personal Laptop",
     printMobileStepPrefix:
       "1) Open the upload page and submit your file, then enter the PIN code on the multifunction printer to print immediately.",
@@ -510,7 +514,7 @@ const translations = {
     laundryCashBullet1: "Use 500 KRW coins.",
     laundryCashBullet2: "Exchange bills for coins at the changer inside.",
     laundryCashLink: "Coin changer guide",
-    laundryCardTitle: "💳 Card payment",
+    laundryCardTitle: "💳 Card payment (New prepaid card)",
     laundryCardBullet1: "Issue a prepaid card at the card machine before use.",
     laundryCardLink: "Card payment guide",
     laundryBonusTitle: "🎁 Prepaid card bonus",
@@ -543,6 +547,8 @@ const translations = {
     cardIssuePageTitle: "🆕 New Prepaid Card",
     cardIssueHeroDesc:
       "If this is your first visit, please issue a prepaid card first.",
+    cardIssueHeroBonus:
+      "When paying for a prepaid card, you can receive up to 25,000 KRW in bonus credit.",
     cardIssueCashTitle: "💵 Issue card with cash",
     cardIssueHowTo: "📌 How to issue",
     cardIssueCashStep1: "Select [Issue Card] button",
@@ -577,7 +583,8 @@ const translations = {
       "👉 If you don’t tap the card at the end, the balance will NOT be added even if payment is completed.",
     cardTopupQuickTitle: "💡 Top-up steps at a glance",
     cardTopupQuickLead:
-      "Card Top-up → Credit card → Choose amount → Pay → Tap card → Done",
+      "Card Top-up → Tap prepaid card → Credit card → Choose amount → Pay → Tap card → Done",
+    cardTopupStep1b: "Tap prepaid card",
     cardTopupStep1: "On the screen, press [Card Top-up].",
     cardTopupStep2:
       "Select credit card as payment method and choose the amount.",
@@ -799,7 +806,7 @@ const translations = {
     goodsDryerSoftenerLi1:
       "Location: In the Lock&Lock box on the work table.",
     goodsDryerSoftenerLi2:
-      "Please use only as much as you need.",
+      "1 sheet per load; up to 2 sheets for large loads.",
     goodsDryerSoftenerNote:
       "⚠️ If overused, this service may become paid instead of free.",
     goodsStainRemoverTitle:
@@ -899,7 +906,8 @@ const translations = {
     printHeroDesc: "可在此使用文档打印、复印、扫描和传真服务。",
     printPriceTitle: "💰 费用说明",
     printPricePrintCopy: "打印、复印：黑白 60韩元/张，彩色 250韩元/张",
-    printPriceScanFax: "扫描、传真：500韩元/次",
+    printPriceScan: "扫描：100韩元/张",
+    printPriceFax: "传真：500韩元/张",
     printMobileTitle: "📱 手机 / 个人笔记本打印",
     printMobileStepPrefix:
       "1）进入文件上传页面上传文档后，在复合机输入PIN码即可立即打印。",
@@ -985,7 +993,7 @@ const translations = {
     laundryCashBullet1: "使用500韩元硬币。",
     laundryCashBullet2: "请先在室内换币机将纸币换成硬币后使用。",
     laundryCashLink: "硬币兑换机指南",
-    laundryCardTitle: "💳 刷卡结算",
+    laundryCardTitle: "💳 刷卡结算（新办预付卡）",
     laundryCardBullet1: "请先在预付卡发卡机办理预付卡后使用。",
     laundryCardLink: "刷卡结算指南",
     laundryBonusTitle: "🎁 预付卡充值赠送说明",
@@ -1018,6 +1026,8 @@ const translations = {
     cardIssuePageTitle: "🆕 新预付卡办理指南",
     cardIssueHeroDesc:
       "首次使用时，请先办理预付卡。",
+    cardIssueHeroBonus:
+      "办理预付卡结账时，最多可获得25,000韩元追加金额。",
     cardIssueCashTitle: "💵 现金办理预付卡",
     cardIssueHowTo: "📌 办理方法",
     cardIssueCashStep1: "选择「办卡」按钮",
@@ -1048,7 +1058,8 @@ const translations = {
       "👉 最后一步如未贴卡，即使支付成功也不会充值到账。",
     cardTopupQuickTitle: "💡 一目了然的充值步骤",
     cardTopupQuickLead:
-      "卡充值按钮 → 信用卡 → 选择金额 → 刷卡支付 → 预付卡贴卡 → 完成",
+      "卡充值按钮 → 预付卡贴卡 → 信用卡 → 选择金额 → 刷卡支付 → 预付卡贴卡 → 完成",
+    cardTopupStep1b: "预付卡贴卡",
     cardTopupStep1: "在画面上选择「卡充值」按钮。",
     cardTopupStep2:
       "在支付方式中选择信用卡，并选择充值金额。",
@@ -1239,7 +1250,7 @@ const translations = {
     goodsDryerSoftenerTitle: "🌸 烘干机专用柔顺剂（免费）",
     goodsDryerSoftenerLi1:
       "位置：工作台上的密封收纳盒内。",
-    goodsDryerSoftenerLi2: "请按需少量使用。",
+    goodsDryerSoftenerLi2: "基本1张，衣物多时最多可使用2张。",
     goodsDryerSoftenerNote:
       "⚠️ 若使用过量，免费服务可能会改为收费。",
     goodsStainRemoverTitle: "✨ 去污剂（免费）",
@@ -1336,7 +1347,8 @@ const translations = {
       "文書印刷、コピー、スキャン、FAXをこのページからご利用いただけます。",
     printPriceTitle: "💰 料金案内",
     printPricePrintCopy: "印刷・コピー：白黒 60ウォン/枚、カラー 250ウォン/枚",
-    printPriceScanFax: "スキャン・FAX：500ウォン/回",
+    printPriceScan: "スキャン：100ウォン/枚",
+    printPriceFax: "FAX：500ウォン/枚",
     printMobileTitle: "📱 モバイル / 個人ノートPCから印刷",
     printMobileStepPrefix:
       "1) ファイルアップロードページで書類をアップロードし、複合機でPIN番号を入力するとすぐに印刷できます。",
@@ -1424,7 +1436,7 @@ const translations = {
     laundryCashBullet1: "500ウォン硬貨をご利用ください。",
     laundryCashBullet2: "店内の両替機で紙幣を硬貨に両替してからご利用ください。",
     laundryCashLink: "両替機案内",
-    laundryCardTitle: "💳 カードでのお支払い",
+    laundryCardTitle: "💳 カードでのお支払い（プリペイドカード新規発行）",
     laundryCardBullet1: "まずプリペイドカード発行機でカードを発行してからご利用ください。",
     laundryCardLink: "カード決済案内",
     laundryBonusTitle: "🎁 プリペイドカードチャージボーナス案内",
@@ -1457,6 +1469,8 @@ const translations = {
     cardIssuePageTitle: "🆕 新規プリペイドカード発行案内",
     cardIssueHeroDesc:
       "初めてご利用の方は、まずプリペイドカードを発行してください。",
+    cardIssueHeroBonus:
+      "プリペイドカードのお支払い時、最大25,000ウォンの追加金をお受け取りいただけます。",
     cardIssueCashTitle: "💵 現金でカード発行",
     cardIssueHowTo: "📌 発行方法",
     cardIssueCashStep1: "「カード発行」ボタンを選択",
@@ -1487,7 +1501,8 @@ const translations = {
       "👉 最後にカードをタッチしないと、決済完了でも残高が増えません。",
     cardTopupQuickTitle: "💡 チャージ手順（かんたんまとめ）",
     cardTopupQuickLead:
-      "カードチャージ → クレジットカード → 金額選択 → カード決済 → カードをタッチ → 完了",
+      "カードチャージ → プリペイドカードをタッチ → クレジットカード → 金額選択 → カード決済 → カードをタッチ → 完了",
+    cardTopupStep1b: "プリペイドカードをタッチ",
     cardTopupStep1:
       "画面で「カードチャージ」ボタンを選択します。",
     cardTopupStep2:
@@ -1705,7 +1720,7 @@ const translations = {
     goodsDryerSoftenerLi1:
       "場所：作業台の上の保存容器（タッパー）の中にあります。",
     goodsDryerSoftenerLi2:
-      "必要な分だけお使いください。",
+      "基本1枚、洗濯物が多い場合は最大2枚まで使用可能。",
     goodsDryerSoftenerNote:
       "⚠️ 使いすぎると、無料提供を中止し有料販売に変更する場合があります。",
     goodsStainRemoverTitle: "✨ シミ抜き剤（無料）",
