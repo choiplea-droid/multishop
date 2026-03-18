@@ -334,6 +334,44 @@
   display: none;
 }
 
+/* ===== 스캔(프린트) 탭 ===== */
+.scan-tabs__bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.75rem;
+}
+
+.scan-tabs__tab {
+  flex: 1;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: var(--font);
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.scan-tabs__tab.is-active {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+.scan-tabs__panel {
+  display: none;
+}
+
+.scan-tabs__panel.is-active {
+  display: block;
+}
+
 @media (max-width: 900px) {
   /* 모바일: 결제 카드 상단 탭 + 해당 탭 내용만 표시 */
   .card-tabs {

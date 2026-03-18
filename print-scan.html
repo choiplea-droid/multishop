@@ -34,52 +34,139 @@
   <main class="sub-main">
     <header class="sub-hero">
       <h1 class="sub-main__title" data-i18n="scanPageTitle">스캔 SCAN</h1>
-      <p class="sub-hero__desc" data-i18n="scanHeroDesc">복합기에서 USB로 문서를 스캔하여 저장하는 방법입니다. USB를 꽂은 뒤 화면에서 USB 스캔을 선택하고, 설정 후 스캔·결제하면 됩니다.</p>
+      <p class="sub-hero__desc" data-i18n="scanHeroDesc">복합기에서 문서를 스캔하는 방법입니다. 이메일 스캔 또는 USB 스캔을 선택해 진행하세요.</p>
     </header>
 
-    <section class="sub-section">
-      <h2 class="sub-section__title" data-i18n="scanStepsTitle">📌 스캔 순서</h2>
-      <div class="sub-figure sub-figure--full">
-        <img src="assets/print-scan-guide.png" alt="스캔 SCAN 전체 가이드 - 01 USB 결합, 02 USB 스캔, 03 세부 설정, 04 종료 후 저장, 05 카드 결제 요청, 06 결제단말기 결제" class="sub-figure__img sub-figure__img--step" />
+    <section class="sub-section scan-tabs" aria-label="스캔 방법 선택">
+      <div class="scan-tabs__bar" role="tablist" aria-label="스캔 탭">
+        <button type="button" class="scan-tabs__tab is-active" role="tab" aria-selected="true" aria-controls="scan-panel-email" data-scan-tab="email" data-i18n="scanTabEmail">이메일 스캔</button>
+        <button type="button" class="scan-tabs__tab" role="tab" aria-selected="false" aria-controls="scan-panel-usb" data-scan-tab="usb" data-i18n="scanTabUsb">USB 스캔</button>
       </div>
-      <ol class="sub-steps sub-steps--card">
-        <li class="sub-steps__item">
-          <span class="sub-steps__num">1</span>
-          <div class="sub-steps__content">
-            <span class="sub-steps__text" data-i18n="scanStep1">복합기 오른쪽 USB 포트에 USB 메모리를 꽂습니다.</span>
+
+      <div class="scan-tabs__panels">
+        <div id="scan-panel-email" class="scan-tabs__panel is-active" role="tabpanel" aria-label="이메일 스캔 안내" data-scan-panel="email">
+          <h2 class="sub-section__title" data-i18n="scanEmailStepsTitle">📌 이메일 스캔 순서</h2>
+          <div class="sub-figure sub-figure--full">
+            <img src="assets/print-scan-email-guide.png" alt="" class="sub-figure__img sub-figure__img--step" data-i18n-alt="scanEmailGuideAlt" />
           </div>
-        </li>
-        <li class="sub-steps__item">
-          <span class="sub-steps__num">2</span>
-          <div class="sub-steps__content">
-            <span class="sub-steps__text" data-i18n="scanStep2">복합기 화면에서 USB 스캔 버튼을 누릅니다.</span>
+          <ol class="sub-steps sub-steps--card">
+            <li class="sub-steps__item">
+              <span class="sub-steps__num">1</span>
+              <div class="sub-steps__content">
+                <span class="sub-steps__text" data-i18n="scanPaperLoadWarn">스캔할 용지를 복합기 상단에 넣어주세요. 호치케스나 이물질이 들어가지 않도록 주의해주세요!</span>
+                <div class="sub-figure">
+                  <img src="assets/print-scan-load-paper.png" alt="" class="sub-figure__img sub-figure__img--step" data-i18n-alt="scanPaperLoadAlt" />
+                </div>
+              </div>
+            </li>
+            <li class="sub-steps__item">
+              <span class="sub-steps__num">2</span>
+              <div class="sub-steps__content">
+                <span class="sub-steps__text" data-i18n="scanEmailStep2">복합기 화면에서 이메일 스캔을 선택합니다.</span>
+                <div class="sub-figure">
+                  <img src="assets/print-scan-email-2.png" alt="" class="sub-figure__img sub-figure__img--step" data-i18n-alt="scanEmailStep2Alt" />
+                </div>
+              </div>
+            </li>
+            <li class="sub-steps__item">
+              <span class="sub-steps__num">3</span>
+              <div class="sub-steps__content">
+                <span class="sub-steps__text" data-i18n="scanEmailStep3">받을 이메일 주소를 입력합니다.</span>
+                <div class="sub-figure">
+                  <img src="assets/print-scan-email-3.png" alt="" class="sub-figure__img sub-figure__img--step" data-i18n-alt="scanEmailStep3Alt" />
+                </div>
+              </div>
+            </li>
+            <li class="sub-steps__item">
+              <span class="sub-steps__num">4</span>
+              <div class="sub-steps__content">
+                <span class="sub-steps__text" data-i18n="scanEmailStep4">흑백/컬러, 해상도, 파일형식(PDF/JPG), 단면/양면 등을 설정한 뒤 스캔(이메일) 버튼을 눌러 스캔합니다.</span>
+                <div class="sub-figure">
+                  <img src="assets/print-scan-email-4.png" alt="" class="sub-figure__img sub-figure__img--step" data-i18n-alt="scanEmailStep4Alt" />
+                </div>
+              </div>
+            </li>
+            <li class="sub-steps__item">
+              <span class="sub-steps__num">5</span>
+              <div class="sub-steps__content">
+                <span class="sub-steps__text" data-i18n="scanEmailStep5">결제내역이 나오면 카드결제요청을 누르고, 결제 단말기에서 결제합니다.</span>
+                <div class="sub-figure">
+                  <img src="assets/print-scan-email-5.png" alt="" class="sub-figure__img sub-figure__img--step" data-i18n-alt="scanEmailStep5Alt" />
+                </div>
+              </div>
+            </li>
+            <li class="sub-steps__item">
+              <span class="sub-steps__num">6</span>
+              <div class="sub-steps__content">
+                <span class="sub-steps__text" data-i18n="scanEmailStep6">스캔이 끝나면 이메일 전송을 확인합니다. (메일 수신까지 시간이 조금 걸릴 수 있어요)</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div id="scan-panel-usb" class="scan-tabs__panel" role="tabpanel" aria-label="USB 스캔 안내" data-scan-panel="usb">
+          <h2 class="sub-section__title" data-i18n="scanStepsTitle">📌 스캔 순서</h2>
+          <div class="sub-figure sub-figure--full">
+            <img src="assets/print-scan-guide.png" alt="스캔 SCAN 전체 가이드 - 01 USB 결합, 02 USB 스캔, 03 세부 설정, 04 종료 후 저장, 05 카드 결제 요청, 06 결제단말기 결제" class="sub-figure__img sub-figure__img--step" />
           </div>
-        </li>
-        <li class="sub-steps__item">
-          <span class="sub-steps__num">3</span>
-          <div class="sub-steps__content">
-            <span class="sub-steps__text" data-i18n="scanStep3">흑백/컬러, 해상도, 원본 방향, 파일형식(PDF/JPG), 단면/양면, 연속스캔 등을 선택한 뒤 스캔(USB) 버튼을 눌러 스캔을 시작합니다.</span>
-          </div>
-        </li>
-        <li class="sub-steps__item">
-          <span class="sub-steps__num">4</span>
-          <div class="sub-steps__content">
-            <span class="sub-steps__text" data-i18n="scanStep4">스캔이 끝나면 '종료 후 저장'을 선택하면 USB에 저장됩니다.</span>
-          </div>
-        </li>
-        <li class="sub-steps__item">
-          <span class="sub-steps__num">5</span>
-          <div class="sub-steps__content">
-            <span class="sub-steps__text" data-i18n="scanStep5">결제내역이 나오면 카드결제요청 버튼을 누릅니다.</span>
-          </div>
-        </li>
-        <li class="sub-steps__item">
-          <span class="sub-steps__num">6</span>
-          <div class="sub-steps__content">
-            <span class="sub-steps__text" data-i18n="scanStep6">결제 단말기에서 신용카드, 체크카드, 제로페이, 카카오페이 등으로 결제합니다.</span>
-          </div>
-        </li>
-      </ol>
+          <ol class="sub-steps sub-steps--card">
+            <li class="sub-steps__item">
+              <span class="sub-steps__num">1</span>
+              <div class="sub-steps__content">
+                <span class="sub-steps__text" data-i18n="scanPaperLoadWarn">스캔할 용지를 복합기 상단에 넣어주세요. 호치케스나 이물질이 들어가지 않도록 주의해주세요!</span>
+                <div class="sub-figure">
+                  <img src="assets/print-scan-load-paper.png" alt="" class="sub-figure__img sub-figure__img--step" data-i18n-alt="scanPaperLoadAlt" />
+                </div>
+              </div>
+            </li>
+            <li class="sub-steps__item">
+              <span class="sub-steps__num">2</span>
+              <div class="sub-steps__content">
+                <span class="sub-steps__text" data-i18n="scanStep1">복합기 오른쪽 USB 포트에 USB 메모리를 꽂습니다.</span>
+                <div class="sub-figure">
+                  <img src="assets/print-scan-usb-1.png" alt="USB 스캔 2단계 - USB를 꽂습니다" class="sub-figure__img sub-figure__img--step" />
+                </div>
+              </div>
+            </li>
+            <li class="sub-steps__item">
+              <span class="sub-steps__num">3</span>
+              <div class="sub-steps__content">
+                <span class="sub-steps__text" data-i18n="scanStep2">복합기 화면에서 USB 스캔 버튼을 누릅니다.</span>
+                <div class="sub-figure">
+                  <img src="assets/print-scan-usb-2.png" alt="USB 스캔 3단계 - 화면에서 USB 스캔 선택" class="sub-figure__img sub-figure__img--step" />
+                </div>
+              </div>
+            </li>
+            <li class="sub-steps__item">
+              <span class="sub-steps__num">4</span>
+              <div class="sub-steps__content">
+                <span class="sub-steps__text" data-i18n="scanStep3">흑백/컬러, 해상도, 원본 방향, 파일형식(PDF/JPG), 단면/양면, 연속스캔 등을 선택한 뒤 스캔(USB) 버튼을 눌러 스캔을 시작합니다.</span>
+                <div class="sub-figure">
+                  <img src="assets/print-scan-usb-3.png" alt="USB 스캔 4단계 - 옵션 설정 후 스캔 시작" class="sub-figure__img sub-figure__img--step" />
+                </div>
+              </div>
+            </li>
+            <li class="sub-steps__item">
+              <span class="sub-steps__num">5</span>
+              <div class="sub-steps__content">
+                <span class="sub-steps__text" data-i18n="scanStep4">스캔이 끝나면 '종료 후 저장'을 선택하면 USB에 저장됩니다.</span>
+              </div>
+            </li>
+            <li class="sub-steps__item">
+              <span class="sub-steps__num">6</span>
+              <div class="sub-steps__content">
+                <span class="sub-steps__text" data-i18n="scanStep5">결제내역이 나오면 카드결제요청 버튼을 누릅니다.</span>
+              </div>
+            </li>
+            <li class="sub-steps__item">
+              <span class="sub-steps__num">7</span>
+              <div class="sub-steps__content">
+                <span class="sub-steps__text" data-i18n="scanStep6">결제 단말기에서 신용카드, 체크카드, 제로페이, 카카오페이 등으로 결제합니다.</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
     </section>
 
     <div class="sub-actions">
@@ -99,5 +186,43 @@
   <script src="i18n.js"></script>
   <script src="visitor-api-config.js"></script>
   <script src="script.js"></script>
+  <script>
+    (function () {
+      function initScanTabs() {
+        var root = document.querySelector(".scan-tabs");
+        if (!root) return;
+        var tabs = root.querySelectorAll(".scan-tabs__tab[data-scan-tab]");
+        var panels = root.querySelectorAll(".scan-tabs__panel[data-scan-panel]");
+        if (!tabs.length || !panels.length) return;
+
+        function setActive(key) {
+          tabs.forEach(function (t) {
+            var isActive = t.getAttribute("data-scan-tab") === key;
+            t.classList.toggle("is-active", isActive);
+            t.setAttribute("aria-selected", isActive ? "true" : "false");
+          });
+          panels.forEach(function (p) {
+            var isActive = p.getAttribute("data-scan-panel") === key;
+            p.classList.toggle("is-active", isActive);
+          });
+        }
+
+        tabs.forEach(function (t) {
+          t.addEventListener("click", function () {
+            setActive(t.getAttribute("data-scan-tab"));
+          });
+        });
+
+        // 디폴트는 이메일 스캔
+        setActive("email");
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initScanTabs);
+      } else {
+        initScanTabs();
+      }
+    })();
+  </script>
 </body>
 </html>
